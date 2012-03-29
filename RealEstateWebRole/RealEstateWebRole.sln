@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateWebRole", "RealEstateWebRole.csproj", "{D25D2088-10FB-4835-A885-A2AF5123D2F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateLibraries", "..\..\RealEstateLibraries\RealEstateLibraries\RealEstateLibraries.csproj", "{19427556-1561-4BB8-BA8A-FD3738C02E32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Debug|x64.ActiveCfg = Debug|x64
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Debug|x64.Build.0 = Debug|x64
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Release|x64.ActiveCfg = Release|x64
+		{D25D2088-10FB-4835-A885-A2AF5123D2F3}.Release|x64.Build.0 = Release|x64
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Debug|x64.ActiveCfg = Debug|x64
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Debug|x64.Build.0 = Debug|x64
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Release|x64.ActiveCfg = Release|x64
+		{19427556-1561-4BB8-BA8A-FD3738C02E32}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

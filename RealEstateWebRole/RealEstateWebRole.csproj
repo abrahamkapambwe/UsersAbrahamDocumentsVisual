@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D25D2088-10FB-4835-A885-A2AF5123D2F3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealEstateWebRole</RootNamespace>
+    <AssemblyName>RealEstateWebRole</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="NewConnection1-Deployment" Order="1">
+          <Destination Path="" />
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <DesktopBuildPackageLocation>obj\Debug\Package\RealEstateWebRole.zip</DesktopBuildPackageLocation>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\RealEstateWebRole.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\RealEstateWebRole.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows.old.000\Users\Kapambwe\Downloads\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK, Version=1.4.6.2, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\AWS SDK for .NET\bin\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityDataModel">
+      <HintPath>packages\WebApi.OData.0.6.0\lib\40-Full\EntityDataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Http">
+      <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.HttpEnhancements">
+      <HintPath>packages\WebApi.Enhancements.0.6.0\lib\40-Full\Microsoft.ApplicationServer.HttpEnhancements.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Spatial">
+      <HintPath>packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Data.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Json">
+      <HintPath>packages\JsonValue.0.6.0\lib\40\Microsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Formatting">
+      <HintPath>packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Formatting.OData">
+      <HintPath>packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Net.Http.Formatting.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Runtime.Serialization.Internal">
+      <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.Runtime.Serialization.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Server.Common">
+      <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.Server.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceModel.Internal">
+      <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.ServiceModel.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\RealEstateLibraries\RealEstateLibraries\bin\Debug\RealEstateLibraries.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OData">
+      <HintPath>packages\WebApi.OData.0.6.0\lib\40-Full\System.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.IdentityModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\HttpClient.0.6.0\lib\40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Providers">
+      <HintPath>packages\System.Web.Providers.1.0.1\lib\Net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI, Version=2010.1.309.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\flashAbraham\DionysusCache\SF_Dionysus\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\AgentsList.aspx" />
+    <Content Include="Admin\Details.aspx" />
+    <Content Include="bin\AsyncCtpLibrary.dll" />
+    <Content Include="bin\AsyncCtpLibrary.xml" />
+    <Content Include="bin\EntityDataModel.dll" />
+    <Content Include="bin\LinqToTwitter.dll" />
+    <Content Include="bin\Microsoft.ApplicationServer.Http.dll" />
+    <Content Include="bin\Microsoft.ApplicationServer.HttpEnhancements.dll" />
+    <Content Include="bin\Microsoft.Data.Spatial.dll" />
+    <Content Include="bin\Microsoft.Exchange.WebServices.dll" />
+    <Content Include="bin\Microsoft.IdentityModel.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Microsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Microsoft.Net.Http.Formatting.dll" />
+    <Content Include="bin\Microsoft.Net.Http.Formatting.OData.dll" />
+    <Content Include="bin\Microsoft.Runtime.Serialization.Internal.dll" />
+    <Content Include="bin\Microsoft.Server.Common.dll" />
+    <Content Include="bin\Microsoft.ServiceModel.Internal.dll" />
+    <Content Include="bin\RealEstateWebRole.pdb" />
+    <Content Include="bin\System.ComponentModel.Composition.dll" />
+    <Content Include="bin\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="bin\System.Data.OData.dll" />
+    <Content Include="bin\System.IdentityModel.dll" />
+    <Content Include="bin\System.Net.Http.dll" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\Telerik.Web.UI.dll" />
+    <Content Include="bin\Telerik.Web.UI.xml" />
+    <Content Include="Controls\Payments.ascx" />
+    <Content Include="Controls\SearchControls.ascx" />
+    <Content Include="Controls\SearchControlsFooterke.ascx" />
+    <Content Include="Controls\SearchControlsFootertz.ascx" />
+    <Content Include="Controls\SearchControlsRentFooter.ascx" />
+    <Content Include="Controls\PreviewControl.ascx" />
+    <Content Include="Controls\Prices.ascx" />
+    <Content Include="Controls\SearchControlsFooter.ascx" />
+    <Content Include="Controls\SearchControlsRentFooterke.ascx" />
+    <Content Include="Controls\SearchMap.ascx" />
+    <Content Include="Controls\SearchMapke.ascx" />
+    <Content Include="EmailTemplates\SendAgentEmails.aspx" />
+    <Content Include="FederationMetadata\2007-06\FederationMetadata.xml" />
+    <Content Include="images\2-column-middle-bg.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\ajax.gif" />
+    <Content Include="images\apartment-3.png" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\arrowreal.png" />
+    <Content Include="images\bank-by-mb.gif" />
+    <Content Include="images\bar.jpg" />
+    <Content Include="images\barlinks.jpg" />
+    <Content Include="images\barlinks.png" />
+    <Content Include="images\barlinksa.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg_a.png" />
+    <Content Include="images\bg_atext.png" />
+    <Content Include="images\bg_b.png" />
+    <Content Include="images\bg_btext.png" />
+    <Content Include="images\bg_c.png" />
+    <Content Include="images\bg_ctext.png" />
+    <Content Include="images\bg_d.png" />
+    <Content Include="images\bg_dtext.png" />
+    <Content Include="images\bg_e.png" />
+    <Content Include="images\bg_etext.png" />
+    <Content Include="images\bg_ftext.png" />
+    <Content Include="images\bg_x.png" />
+    <Content Include="images\BizSpark_StartUp.jpg" />
+    <Content Include="images\bottom-bg.png" />
+    <Content Include="images\button.png" />
+    <Content Include="images\checkmark-small.png" />
+    <Content Include="images\columntitleepropertysearch.gif" />
+    <Content Include="images\dot.png" />
+    <Content Include="images\eproperty-estate-agency.png" />
+    <Content Include="images\epropertysearch-bg.jpg" />
+    <Content Include="images\epropertysearch-facebook.png" />
+    <Content Include="images\epropertysearch-sprite.jpg" />
+    <Content Include="images\epropertysearch-within-bg.gif" />
+    <Content Include="images\epropertysearcharrangeview-sprite.png" />
+    <Content Include="images\epropertysearchfiltertitle.png" />
+    <Content Include="images\epropertysearchitembg.jpg" />
+    <Content Include="images\epropertysearchresults-bg.png" />
+    <Content Include="images\epropertysearchresults-bottom.png" />
+    <Content Include="images\epropertysearchresultsbottom.png" />
+    <Content Include="images\epropertysearch_details_sprite.jpg" />
+    <Content Include="images\epropertysearch_title-bg.jpg" />
+    <Content Include="images\epropertysearshthumbnails-bg.gif" />
+    <Content Include="images\epropertysend.jpg" />
+    <Content Include="images\footer.png" />
+    <Content Include="images\footerhover.png" />
+    <Content Include="images\footernew.jpg" />
+    <Content Include="images\green.jpg" />
+    <Content Include="images\green1.jpg" />
+    <Content Include="images\header_bg.jpg" />
+    <Content Include="images\header_bg.png" />
+    <Content Include="images\hover.jpg" />
+    <Content Include="images\images_epropertysearch_co_za.jpg" />
+    <Content Include="images\images_propertysearch.jpg" />
+    <Content Include="images\left.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\maestro-by-mb.gif" />
+    <Content Include="images\mainbg.png" />
+    <Content Include="images\NorthernCape.jpg" />
+    <Content Include="images\orange.jpg" />
+    <Content Include="images\right.gif" />
+    <Content Include="images\search.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\searchbg.png" />
+    <Content Include="images\searchbutton.png" />
+    <Content Include="images\Sign-in-with-Twitter-darker.png" />
+    <Content Include="images\skrill-moneybookers-logo_100x59.gif" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\SouthAfricaMap.jpg" />
+    <Content Include="images\submit.jpg" />
+    <Content Include="images\temp\bg_atext.png" />
+    <Content Include="images\temp\bg_btext.png" />
+    <Content Include="images\temp\bg_ctext.png" />
+    <Content Include="images\temp\bg_dtext.png" />
+    <Content Include="images\temp\bg_etext.png" />
+    <Content Include="images\temp\bg_ftext.png" />
+    <Content Include="images\tick_grid.png" />
+    <Content Include="images\top-bg.png" />
+    <Content Include="images\visadebit-by-mb.gif" />
+    <Content Include="images\visaelectron-by-mb.gif" />
+    <Content Include="Members\maps\Map.ascx" />
+    <Content Include="Members\maps\PayGateway.aspx" />
+    <Content Include="Members\maps\previewMap.aspx" />
+    <Content Include="Members\maps\PropertyPictures.aspx" />
+    <Content Include="Members\maps\uploadMap.aspx" />
+    <Content Include="packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.dll" />
+    <Content Include="packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.xml" />
+    <Content Include="packages\HttpClient.0.6.0\lib\40\System.Net.Http.dll" />
+    <Content Include="packages\HttpClient.0.6.0\lib\40\System.Net.Http.xml" />
+    <Content Include="packages\JsonValue.0.6.0\lib\40\Microsoft.Json.dll" />
+    <Content Include="packages\JsonValue.0.6.0\lib\40\Microsoft.Json.xml" />
+    <Content Include="packages\JsonValue.0.6.0\lib\40\Microsoft.Server.Common.dll" />
+    <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.dll" />
+    <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.xml" />
+    <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.Runtime.Serialization.Internal.dll" />
+    <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.Server.Common.dll" />
+    <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.ServiceModel.Internal.dll" />
+    <Content Include="packages\WebApi.Enhancements.0.6.0\lib\40-Full\Microsoft.ApplicationServer.HttpEnhancements.dll" />
+    <Content Include="packages\WebApi.OData.0.6.0\lib\40-Full\EntityDataModel.dll" />
+    <Content Include="packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Data.Spatial.dll" />
+    <Content Include="packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Net.Http.Formatting.OData.dll" />
+    <Content Include="packages\WebApi.OData.0.6.0\lib\40-Full\Microsoft.Net.Http.Formatting.OData.xml" />
+    <Content Include="packages\WebApi.OData.0.6.0\lib\40-Full\System.Data.OData.dll" />
+    <Content Include="Public\Favourite.aspx" />
+    <Content Include="Public\ForgotPassword.aspx" />
+    <Content Include="Public\Home.aspx" />
+    <Content Include="Public\Map\Map.aspx" />
+    <Content Include="Public\TermsCondition.aspx" />
+    <Content Include="Public\Contact.aspx" />
+    <Content Include="Public\Forsale.aspx" />
+    <Content Include="Scripts\jqFancyTransitions.1.8.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\SpryTabbedPanels.js" />
+    <Content Include="Styles\arrow.png" />
+    <Content Include="Styles\arrowreal.png" />
+    <Content Include="Styles\bg.jpg" />
+    <Content Include="Styles\bg_a.png" />
+    <Content Include="Styles\bg_atext.png" />
+    <Content Include="Styles\bg_b.png" />
+    <Content Include="Styles\bg_btext.png" />
+    <Content Include="Styles\bg_c.png" />
+    <Content Include="Styles\bg_ctext.png" />
+    <Content Include="Styles\bg_d.png" />
+    <Content Include="Styles\bg_dtext.png" />
+    <Content Include="Styles\bg_e.png" />
+    <Content Include="Styles\bg_etext.png" />
+    <Content Include="Styles\bg_ftext.png" />
+    <Content Include="Styles\Copy of main.css" />
+    <Content Include="Styles\dot.png" />
+    <Content Include="Styles\footer.png" />
+    <Content Include="Styles\footerhover.png" />
+    <Content Include="Styles\hover.jpg" />
+    <Content Include="Styles\logo.png" />
+    <Content Include="Styles\mainbg.png" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Styles\search.jpg" />
+    <Content Include="Styles\search.png" />
+    <Content Include="Styles\searchbutton.png" />
+    <Content Include="Styles\selectedmenu_.jpg" />
+    <Content Include="Styles\smalllogo.png" />
+    <Content Include="Styles\SpryTabbedPanels.css" />
+    <Content Include="Styles\submit.jpg" />
+    <Content Include="WebServices\AutoComplete.asmx" />
+    <Content Include="images\contact.png" />
+    <Content Include="images\empty_thumbnail.gif" />
+    <Content Include="images\FavouriteTransitionButton.png" />
+    <Content Include="images\results-button-favourite-icon.png" />
+    <Content Include="images\results-button-read-more-icon.png" />
+    <Content Include="images\results-button-show-mini-map-icon.png" />
+    <Content Include="Members\AgentProfile.aspx" />
+    <Content Include="Members\ChangePassword.aspx" />
+    <Content Include="Members\ChangePasswordSuccess.aspx" />
+    <Content Include="Public\Login.aspx" />
+    <Content Include="Members\Preview.aspx" />
+    <Content Include="Public\Register.aspx" />
+    <Content Include="Members\Profile.aspx" />
+    <Content Include="Members\UploadPictures.aspx" />
+    <Content Include="Members\ViewProperty.aspx" />
+    <Content Include="images\DeleteIcon.gif" />
+    <Content Include="images\search_button2.png" />
+    <Content Include="images\search_button_green.png" />
+    <Content Include="Public\AgentDetails.aspx" />
+    <Content Include="Public\AgentResults.aspx" />
+    <Content Include="Public\Rent.aspx" />
+    <Content Include="Public\PropertyDetails.aspx" />
+    <Content Include="Public\SearchResult.aspx" />
+    <Content Include="Public\Sell.aspx" />
+    <Content Include="Services\EstateAgency.aspx" />
+    <Content Include="Services\HomeImprovement.aspx" />
+    <Content Include="Services\JoinDirectory.aspx" />
+    <Content Include="Services\ListingAgency.aspx" />
+    <Content Include="SpryAssets\SpryTabbedPanels.css" />
+    <Content Include="SpryAssets\SpryTabbedPanels.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebServices\EmailAgent.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AgentsList.aspx.cs">
+      <DependentUpon>AgentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AgentsList.aspx.designer.cs">
+      <DependentUpon>AgentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentDetails.Master.cs">
+      <DependentUpon>AgentDetails.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentDetails.Master.designer.cs">
+      <DependentUpon>AgentDetails.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Payments.ascx.cs">
+      <DependentUpon>Payments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Payments.ascx.designer.cs">
+      <DependentUpon>Payments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFooterke.ascx.cs">
+      <DependentUpon>SearchControlsFooterke.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFooterke.ascx.designer.cs">
+      <DependentUpon>SearchControlsFooterke.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFootertz.ascx.cs">
+      <DependentUpon>SearchControlsFootertz.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFootertz.ascx.designer.cs">
+      <DependentUpon>SearchControlsFootertz.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsRentFooter.ascx.cs">
+      <DependentUpon>SearchControlsRentFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsRentFooter.ascx.designer.cs">
+      <DependentUpon>SearchControlsRentFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PreviewControl.ascx.cs">
+      <DependentUpon>PreviewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PreviewControl.ascx.designer.cs">
+      <DependentUpon>PreviewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Prices.ascx.cs">
+      <DependentUpon>Prices.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Prices.ascx.designer.cs">
+      <DependentUpon>Prices.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFooter.ascx.cs">
+      <DependentUpon>SearchControlsFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFooter.ascx.designer.cs">
+      <DependentUpon>SearchControlsFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsRentFooterke.ascx.cs">
+      <DependentUpon>SearchControlsRentFooterke.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsRentFooterke.ascx.designer.cs">
+      <DependentUpon>SearchControlsRentFooterke.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchMap.ascx.cs">
+      <DependentUpon>SearchMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchMap.ascx.designer.cs">
+      <DependentUpon>SearchMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchMapke.ascx.cs">
+      <DependentUpon>SearchMapke.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchMapke.ascx.designer.cs">
+      <DependentUpon>SearchMapke.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\maps\PayGateway.aspx.cs">
+      <DependentUpon>PayGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\maps\PayGateway.aspx.designer.cs">
+      <DependentUpon>PayGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\maps\PropertyPictures.aspx.cs">
+      <DependentUpon>PropertyPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\maps\PropertyPictures.aspx.designer.cs">
+      <DependentUpon>PropertyPictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Favourite.aspx.cs">
+      <DependentUpon>Favourite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Favourite.aspx.designer.cs">
+      <DependentUpon>Favourite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Map\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Map\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\TermsCondition.aspx.cs">
+      <DependentUpon>TermsCondition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\TermsCondition.aspx.designer.cs">
+      <DependentUpon>TermsCondition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Forsale.aspx.cs">
+      <DependentUpon>Forsale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Forsale.aspx.designer.cs">
+      <DependentUpon>Forsale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SimpleDbMembershipProvider.cs" />
+    <Compile Include="UploadPictures.Master.cs">
+      <DependentUpon>UploadPictures.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadPictures.Master.designer.cs">
+      <DependentUpon>UploadPictures.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplates\SendAgentEmails.aspx.cs">
+      <DependentUpon>SendAgentEmails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailTemplates\SendAgentEmails.aspx.designer.cs">
+      <DependentUpon>SendAgentEmails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\maps\Map.ascx.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\maps\Map.ascx.designer.cs">
+      <DependentUpon>Map.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\maps\previewMap.aspx.cs">
+      <DependentUpon>previewMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\maps\previewMap.aspx.designer.cs">
+      <DependentUpon>previewMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\maps\uploadMap.aspx.cs">
+      <DependentUpon>uploadMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\maps\uploadMap.aspx.designer.cs">
+      <DependentUpon>uploadMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sell.Master.cs">
+      <DependentUpon>Sell.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell.Master.designer.cs">
+      <DependentUpon>Sell.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Rent.Master.cs">
+      <DependentUpon>Rent.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rent.Master.designer.cs">
+      <DependentUpon>Rent.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Members\AgentProfile.aspx.cs">
+      <DependentUpon>AgentProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\AgentProfile.aspx.designer.cs">
+      <DependentUpon>AgentProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ImageEvent.cs" />
+    <Compile Include="Members\Preview.aspx.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\Preview.aspx.designer.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\UploadPictures.aspx.cs">
+      <DependentUpon>UploadPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\UploadPictures.aspx.designer.cs">
+      <DependentUpon>UploadPictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\ViewProperty.aspx.cs">
+      <DependentUpon>ViewProperty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\ViewProperty.aspx.designer.cs">
+      <DependentUpon>ViewProperty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\AgentDetails.aspx.cs">
+      <DependentUpon>AgentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\AgentDetails.aspx.designer.cs">
+      <DependentUpon>AgentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\AgentResults.aspx.cs">
+      <DependentUpon>AgentResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\AgentResults.aspx.designer.cs">
+      <DependentUpon>AgentResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Rent.aspx.cs">
+      <DependentUpon>Rent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Rent.aspx.designer.cs">
+      <DependentUpon>Rent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\PropertyDetails.aspx.cs">
+      <DependentUpon>PropertyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\PropertyDetails.aspx.designer.cs">
+      <DependentUpon>PropertyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Sell.aspx.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Sell.aspx.designer.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Real.Master.cs">
+      <DependentUpon>Real.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Real.Master.designer.cs">
+      <DependentUpon>Real.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Public\SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\EstateAgency.aspx.cs">
+      <DependentUpon>EstateAgency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\EstateAgency.aspx.designer.cs">
+      <DependentUpon>EstateAgency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\HomeImprovement.aspx.cs">
+      <DependentUpon>HomeImprovement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\HomeImprovement.aspx.designer.cs">
+      <DependentUpon>HomeImprovement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\JoinDirectory.aspx.cs">
+      <DependentUpon>JoinDirectory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\JoinDirectory.aspx.designer.cs">
+      <DependentUpon>JoinDirectory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ListingAgency.aspx.cs">
+      <DependentUpon>ListingAgency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\ListingAgency.aspx.designer.cs">
+      <DependentUpon>ListingAgency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\AutoComplete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\EmailAgent.cs" />
+    <Compile Include="WebServices\IEmailAgent.cs" />
+    <Compile Include="WebServices\RealEstateApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Real.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sell.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rent.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgentDetails.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="aspnet_client\system_web\4_0_30319\" />
+    <Folder Include="bin\ar\" />
+    <Folder Include="bin\cs\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\en\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\fr\" />
+    <Folder Include="bin\he\" />
+    <Folder Include="bin\hi\" />
+    <Folder Include="bin\it\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="bin\ko\" />
+    <Folder Include="bin\nl\" />
+    <Folder Include="bin\pt\" />
+    <Folder Include="bin\ru\" />
+    <Folder Include="bin\tr-TR\" />
+    <Folder Include="bin\zh-CHS\" />
+    <Folder Include="bin\zh-CHT\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UploadPictures.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Members\web.config" />
+    <None Include="packages\HttpClient.0.6.0\HttpClient.0.6.0.nupkg" />
+    <None Include="packages\JsonValue.0.6.0\JsonValue.0.6.0.nupkg" />
+    <Content Include="packages\repositories.config" />
+    <None Include="packages\WebApi.0.6.0\content\web.config.transform" />
+    <None Include="packages\WebApi.0.6.0\WebApi.0.6.0.nupkg" />
+    <None Include="packages\WebApi.All.0.6.0\WebApi.All.0.6.0.nupkg" />
+    <None Include="packages\WebApi.Enhancements.0.6.0\WebApi.Enhancements.0.6.0.nupkg" />
+    <None Include="packages\WebApi.OData.0.6.0\WebApi.OData.0.6.0.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49178</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49178/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

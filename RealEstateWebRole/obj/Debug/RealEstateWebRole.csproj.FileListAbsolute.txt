@@ -1,0 +1,9 @@
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\bin\Microsoft.Json.dll
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\RealEstateLibraries.dll
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\RealEstateLibraries.pdb
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\obj\Debug\RealEstateWebRole.csprojResolveAssemblyReference.cache
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\obj\Debug\RealEstateWebRole.dll
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\obj\Debug\RealEstateWebRole.pdb
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\RealEstateWebRole.dll
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\RealEstateWebRole.pdb
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\bin\Microsoft.IdentityModel.dll

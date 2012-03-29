@@ -1,0 +1,736 @@
+﻿/*-----------------------------------------------------------------------------------------------*/
+/*                                             CSS RESET                                         */
+/*-----------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: "Century Gothic", Arial, "Times New Roman", Times, serif;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {outline: 0;}
+body {line-height: 1; background:#444; margin:0px; position:relative}
+ol, ul {list-style: none;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '"';}
+blockquote, q {quotes: '"' '"';}
+p{text-shadow:1px 1px 4px #000; color:#666; font-size:12px;width:423px;line-height:16px}
+.clear{clear:both; margin:0px; padding:0px; outline:none; width:0px; height:0px}
+.space{width:100%; height:10px; margin:0px}
+
+
+
+
+
+
+
+
+
+
+
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background:#fff url(bg.jpg) repeat-x;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #ff0000;
+}
+
+
+.mains
+{
+    background:none;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #777777;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+
+/* MENU   
+----------------------------------------------------------*/
+.spacesmall {width:100%; height:4px}
+#nav {float:left}
+#loginarea {float:left; margin-left:140px}
+
+
+
+#menu 	{
+		list-style:none; margin:0; padding:0; background:transparent; width:500px; position:relative; left:-14px; top:0px}
+} 
+ul.menu * 		
+	{		
+		margin:0; padding:0
+}
+ul.menu a 	{
+		display:block; color:#fff; text-decoration:none; font-weight:normal !important; line-height:25px
+}
+ul.menu a img 	{
+		position:relative; top:23px; left:-25px
+} 
+ul.menu a #contact 	{
+		position:relative; top:0px; left:-5px
+} 
+ul.menu li 	{
+		position:relative; float:left; margin-right:0px; background-image:none; border-left:1px; margin-left:1px; line-height:25px
+}
+ul.menu li:hover	{
+		position:relative; float:left; margin-right:0px; background:url(../images/hover.jpg) top center no-repeat; border-left:1px; margin-left:1px
+}
+ul.menu ul 	{	position:absolute; top:29px; left:0; display:none; opacity:0; list-style:none
+}
+ul.menu ul li 	{
+		position:relative; left:0px; top:5px; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#d50; border-left:2px solid #333; border-right:2px solid #333
+}
+ul.menu ul li:hover{
+		position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#c40; border-left:2px solid #333; border-right:2px solid #333
+}
+ul.menu ul #bottom 	{
+		border-bottom:2px solid #333;
+}
+ul.menu ul li a{position:relative; left:4px !important; font-size:11px !important}
+ul.menu ul ul 	{
+		left:128px; top:-1px
+}
+ul.menu .menulink 	{
+		border:0px; padding-left:15px; padding-right:15px; padding-top:4px; padding-bottom:2px; font-weight:normal; background:url('images/menupic.jpg'); position:relative; top:-2px
+}
+ul.menu .menulink:hover, ul.menu .menuhover {background: url(images/menupica.jpg)}
+
+
+#menu1 	{
+		list-style:none; margin:0; padding:0; background:transparent; position:relative; top:-0px !important; width:270px; position:relative; left:-11px; top:0px} 
+ul.menu1 * 		
+	{		
+		margin:0; padding:0
+}
+ul.menu1 a 	{
+		display:block; color:#fff; text-decoration:none; font-weight:normal !important; line-height:25px; font-size:11px
+}
+ul.menu1 a img 	{
+		position:relative; top:1px; left:11px
+} 
+ul.menu1 a #contact 	{
+		position:relative; top:0px; left:-5px
+} 
+ul.menu1 li 	{
+		position:relative; float:left; margin-right:0px; background:url(../images/hover.jpg) top center no-repeat; border-left:1px; margin-left:1px; line-height:25px
+}
+ul.menu1 li:hover	{
+		position:relative; float:left; margin-right:0px; background:url(../images/hover.jpg) bottom center no-repeat; border-left:1px; margin-left:1px
+}
+ul.menu1 ul 	{	position:absolute; top:29px; left:0; display:none; opacity:0; list-style:none
+}
+ul.menu1 ul li 	{
+		position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#d50; border-left:2px solid #333; border-right:2px solid #333; font-size:10px !important
+}
+ul.menu1 ul li:hover{
+		position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#c40; border-left:2px solid #333; border-right:2px solid #333; font-size:10px !important
+}
+ul.menu1 ul #bottom 	{
+		border-bottom:2px solid #333;
+}
+
+ul.menu1 ul li a{position:relative; left:4px !important}
+
+
+ul.menu1 ul ul 	{
+		left:128px; top:-1px
+}
+ul.menu1 .menulink 	{
+		border:0px; padding-left:15px; padding-right:15px; padding-top:4px; padding-bottom:2px; font-weight:normal; background:url('images/menupic.jpg'); position:relative; top:-2px
+}
+ul.menu1 .menulink:hover, ul.menu .menuhover {
+		background: url(images/menupica.jpg);
+}
+
+
+
+#menu2 {float:right; width:200px; position:relative; top:-47px; left:30px}
+
+.logintext {float:right; padding-left:25px; padding-right:25px; padding-top:4px; padding-bottom:4px; margin-right:1px; background:url(../images/hover.jpg) top center no-repeat; line-height:25px; text-align:center; text-decoration:none; font-size:11px; position:relative; top:-12px}
+.logintext:hover {float:right; padding-right:25px; padding-top:4px; padding-bottom:4px;  margin-right:1px; background:url(../images/hover.jpg) bottom center no-repeat; line-height:25px; text-align:center; text-decoration:none; font-size:11px}
+
+.logintext img {position:relative; top:1px; left:4px}
+
+
+
+/* SEARCH   
+----------------------------------------------------------*/
+#searcharea {width:650px; height:61px; background:url(../images/search.png) top center no-repeat; margin:0px auto}
+#searcharea #txtSearchBuy {border:0px; outline:0px; width:520px; height:25px; margin-left:28px; position:relative; top:-5px}
+#searcharea #searchbutton {width:41px; height:40px; background:url(../images/searchbutton.png) left top no-repeat; position:relative; top:11px; left:-20px}
+#searcharea #searchbutton:hover {width:41px; height:40px; background:url(../images/searchbutton.png) right top no-repeat; position:relative; top:11px; left:-20px}
+#searcharea #searchbutton #imgBuySearch{width:41px; height:40px; margin:0px}
+#searchcat {width:300px; margin:0px auto;}
+#searchcat .text {float:left; width:80px}
+#searchcat .text span {color:#888; font-size:10px; line-height:15px}
+#searchcat .radio {float:left; width:20px}
+#searchcat .radio #rdnSearchBuy {position:relative; top:-0px; left:-50px}
+#searchcat .radio #rbnSearchRent {position:relative; top:-0px; left:-50px}
+#searchcat .radio #rbnSearchAgent {position:relative; top:-0px; left:-20px}
+
+
+
+
+
+/* MAIN   
+----------------------------------------------------------*/
+
+.main_a {width:100%; margin:0px}
+.main_a .default_content {width:980px}
+.main_a .default_content .default_content_a {width:320px; height:150px; background:url(../images/orange.jpg) top repeat-x; float:left}
+.main_a .default_content .default_content_a:hover {width:320px; height:150px; background:url(../images/bg_a.png) bottom repeat-x}
+.main_a .default_content .default_content_b {width:320px; height:150px; background:url(../images/green.jpg) top repeat-x; float:left; margin-left:10px}
+.main_a .default_content .default_content_b:hover {width:320px; height:150px; background:url(../images/bg_c.png) bottom repeat-x}
+.main_a .default_content .default_content_c {width:320px; height:150px; background:url(../images/green1.jpg) top repeat-x; float:left; margin-left:10px}
+.main_a .default_content .default_content_c:hover {width:320px; height:150px; background:url(../images/bg_c.png) bottom repeat-x}
+
+.main_a .default_content .default_content_d {width:320px; height:150px; background:url(../images/bg_b.png) top repeat-x; float:left}
+.main_a .default_content .default_content_d:hover {width:320px; height:150px; background:url(../images/bg_b.png) bottom repeat-x}
+
+.main_a .default_content .default_content_e {width:320px; height:150px; background:url(../images/bg_b.png) top repeat-x; float:left; margin-left:10px}
+.main_a .default_content .default_content_e:hover {width:320px; height:150px; background:url(../images/bg_b.png) bottom repeat-x}
+
+.main_a .default_content .default_content_f {width:320px; height:150px; background:url(../images/bg_e.png) top repeat-x; float:left; margin-left:10px}
+.main_a .default_content .default_content_f:hover {width:320px; height:150px; background:url(../images/bg_e.png) bottom repeat-x}
+
+
+/* FOOTER   
+----------------------------------------------------------*/
+.footerarea {clear:both; width:100%; margin:0px; margin-top:30px !important}
+.footer {width:980px; height:40px; border:1px solid #eee; background:url(../images/footer.png) repeat-x; clear:both}
+.footer #logo {float:left; position:relative; top:10px; right:-5px}
+.footer #logolink {float:right; position:relative; top:5px; right:5px; width:160px; text-align:center; background:url(../images/footerhover.png) top center repeat-x; height:30px}
+.footer #logolink:hover {float:right; position:relative; top:5px; right:5px; width:160px; text-align:center; background:url(../images/footerhover.png) bottom center repeat-x; height:30px}
+.footer #logolink a{text-decoration:none; color:#000; font-size:10px; line-height:30px; text-shadow:1px 1px 1px #fff}
+
+
+.disclaimerarea {clear:both; width:980px; margin:0px auto; height:40px}
+.disclaimerarea .left {float:left; width:600px}
+.disclaimerarea .right {float:right; width:80px}
+
+
+#menu3 	{
+		list-style:none; margin:0; padding:0; background:transparent; position:relative; top:-0px !important; width:270px; position:relative; left:-11px; top:0px} 
+ul.menu3 * 			{				margin:0; padding:0}
+ul.menu3 a {	display:block; color:#999; text-decoration:none; font-weight:normal !important; line-height:25px; font-size:11px}
+		
+ul.menu3 a img 	{		position:relative; top:1px; left:11px} 
+ul.menu3 a #contact 	{		position:relative; top:0px; left:-5px} 
+ul.menu3 li 	{position:relative; float:left; margin-right:0px; border-left:1px; margin-left:1px; line-height:25px}
+ul.menu3 li:hover	{		position:relative; float:left; margin-right:0px; border-left:1px; margin-left:1px}
+ul.menu3 ul 	{	position:absolute; top:29px; left:0; display:none; opacity:0; list-style:none}
+ul.menu3 ul li 	{position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#d50; border-left:2px solid #333; border-right:2px solid #333; font-size:10px !important; color:#999}
+ul.menu3 ul li:hover{		position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#c40; border-left:2px solid #333; border-right:2px solid #333; font-size:10px !important}
+ul.menu3 ul li #selected 	{color:#C30}
+ul.menu3 ul #bottom 	{		border-bottom:2px solid #333;}
+ul.menu3 ul li a{position:relative; left:4px !important; color:#999}
+ul.menu3 ul ul 	{	left:128px; top:-1px}
+.menu3 li .menulink 	{border:0px; padding-left:5px; padding-right:5px; padding-top:4px; padding-bottom:2px; font-weight:normal; background:url('images/menupic.jpg'); position:relative; top:-2px; color:#999}
+.menu3 li .menulink {color:#999; font-size:9px; position:relative; left:4px}
+.menu3 li #selected {color:#F60; font-size:9px; position:relative; left:4px}
+.menu3 li .menulink:hover, ul.menu .menuhover {		background: url(images/menupica.jpg);}
+
+
+
+#menu4 	{list-style:none; margin:0; padding:0; background:transparent; position:relative; top:-0px !important; width:270px; position:relative; left:-11px; top:0px} 
+ul.menu4 * 			{	margin:0; padding:0}
+ul.menu4 a {	display:block; color:#999; text-decoration:none; font-weight:normal !important; line-height:25px; font-size:11px}
+		
+ul.menu4 a img 	{		position:relative; top:1px; left:11px} 
+ul.menu4 a #contact 	{		position:relative; top:0px; left:-5px} 
+ul.menu4 li 	{position:relative; float:left; margin-right:0px; border-left:1px; margin-left:1px; line-height:25px}
+ul.menu4 li:hover	{		position:relative; float:left; margin-right:0px; border-left:1px; margin-left:1px}
+ul.menu4 ul 	{	position:absolute; top:29px; left:0; display:none; opacity:0; list-style:none}
+ul.menu4 ul li 	{position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#d50; border-left:2px solid #333; border-right:2px solid #333; font-size:10px !important; color:#999}
+ul.menu4 ul li:hover{		position:relative; border:0px solid #aaa; border-top:none; width:140px; margin:0;  line-height:25px; background:#c40; border-left:2px solid #333; border-right:2px solid #333; font-size:10px !important}
+ul.menu4 ul li #selected 	{color:#C30}
+ul.menu4 ul #bottom 	{		border-bottom:2px solid #333;}
+ul.menu4 ul li a{position:relative; left:4px !important; color:#999}
+ul.menu4 ul ul 	{	left:128px; top:-1px}
+.menu4 li .menulink 	{border:0px; padding-left:5px; padding-right:5px; padding-top:4px; padding-bottom:2px; font-weight:normal; background:url('images/menupic.jpg'); position:relative; top:-2px; color:#999}
+.menu4 li .menulink {color:#999; font-size:9px; position:relative; left:4px}
+.menu4 li #selected {color:#F60; font-size:9px; position:relative; left:4px}
+.menu4 li .menulink:hover, ul.menu .menuhover {		background: url(images/menupica.jpg);}
+
+
+
+/*  SEARCH RESULTS PAGE
+-----------------------------------------------------------*/
+#searchcontainer {width:990px; margin:0px auto; background:#fff; border:1px solid #eee; height:auto}
+#searchcontainer #searchfilter{ Width:250px; height:1000px;}
+#searchcontainer #searchcriteria { width:230px; height:auto; margin-left:15px; margin-top:15px; margin-bottom:15px; background:#ff6600 url('../images/search.jpg') bottom repeat-x; border:1px solid #ccc}
+#searchcontainer #searchcriteria .labels {margin-top:10px; margin-left:14px; color:#fff; font-weight:bold; font-size:11px; line-height:20px}
+#searchcontainer #searchcriteria .dropdown {width:210px; margin-left:17px; height:30px}
+#searchcontainer #searchcriteria .dropdownx {width:210px; margin-left:17px; height:80px}
+#searchcontainer #searchcriteria .dropdown .drops {width:87px; float:left}
+#searchcontainer #searchcriteria .dropdown .drops .dropdowns {width:80px; font-size:10px; color:#000; height:25px; border:0px; outline:0px}
+#searchcontainer #searchcriteria .dropdownx .drops .dropdownslong {width:195px; font-size:10px; color:#000; height:25px; border:0px; outline:0px}
+#searchcontainer #searchcriteria .dropdown .dropstext {width:18px; text-align:left; float:left; margin-left:10px}
+#searchcontainer #searchcriteria .dropdown .dropstext span {color:#fff; font-size:10px; line-height:25px}
+#searchcontainer #btnSubmit {width:195px; height:30px; margin-left:20px; background:#000; color:#fff !important}
+   
+#searchcontainer.searchresults {width:700px; padding:20px; margin-left:16px;height:1000px; background:#fff; margin-top:15px; border:1px solid #eee}                         
+.searchresults .searchItemImage
+{
+    float: left; 
+    width: 50%;
+}
+.searchresults .searchItemDetails
+{
+   float: right;
+    list-style-type: none;
+     width: 50%;
+}
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color:transparent;
+    margin: 0px auto 0px auto;
+    border:0px;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background-image:none;
+    width: 100%;
+}
+
+
+
+
+
+/*
+.Search
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background:none;
+    width: 100%;
+    z-index: 0;
+}
+.Search-inner
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    text-align: center;
+}
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+*/
+
+/* TAB MENU   
+----------------------------------------------------------*/
+/*
+div.hideSkiplink
+{
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 20;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+    z-index: 20;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    z-index: 20;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 20;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+    z-index: 20;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+    z-index: 20;
+}
+*/
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+div#GlobalMainContentContainer
+{
+    width: 976px;
+    margin: 0 auto;
+}
+
+div.SearchResult ul li
+{
+    border-bottom: Solid 1px #d9d9d9;
+    float: left;
+}
+li.ReadMore
+{
+    background: url(/Images/results-button-read-more-icon.png) no-repeat left center;
+    padding: 4px 0 4px 23px;
+}
+li.ShowMap
+{
+    padding: 4px 0 4px 23px;
+}
+li.Favourite
+{
+    padding: 4px 0 4px 23px;
+}
+li.ContactAgent
+{
+    padding: 4px 0 4px 23px;
+    margin: 0 0 0 3px;
+}
+div.SearchResult ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    position: relative;
+    width: 700px;
+    z-index: 100;
+    height: auto;
+    display: table-cell;
+}
+div.SearchResult ul li.SearchItem
+{
+    border-bottom:white 1px solid;
+     width: 618px;
+     height:200px;
+}
+div.SearchResult ul.SearchResultItem li .property-image-size
+{
+     width: 156px;
+}
+.black_overlay
+{
+    z-index: 1001;
+    position: absolute;
+    filter: alpha(opacity=80);
+    background-color: black;
+    width: 100%;
+    display: none;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: .80;
+    -moz-opacity: 0.8;
+}
+.white_content
+{
+    z-index: 1003;
+    border-bottom: orange 1px solid;
+    position: absolute;
+    border-left: orange 1px solid;
+    padding-bottom: 16px;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: none;
+    overflow: auto;
+    border-top: orange 1px solid;
+    top: 20%;
+    border-right: orange 1px solid;
+    padding-top: 16px;
+    left: 33%;
+}
+.white_content_test
+{
+    z-index: 1003;
+    border-bottom: orange 1px solid;
+    position: absolute;
+    border-left: orange 1px solid;
+    padding-bottom: 16px;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: none;
+    overflow: auto;
+    border-top: orange 1px solid;
+    top: 20%;
+    width:400px;
+    border-right: orange 1px solid;
+    padding-top: 16px;
+    left: 33%;
+}
+.stylenone
+{
+      display: none;
+}
+.white_content_test_close
+{
+    float:right;
+}
+.mine-button 
+{
+          outline: 0;  
+              margin: 0 4px 0 0;    
+               padding: 0 1em;    
+                height: 2em;   
+                  text-decoration: none !important;    
+                    cursor: pointer;   
+                       position: relative;  
+                          text-align: center;  
+                             
+ } 

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EmailAgent"  Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" CodeBehind="~/WebServices/EmailAgent.cs" %>

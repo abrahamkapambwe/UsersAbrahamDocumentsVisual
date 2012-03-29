@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sell.Master.cs" Inherits="RealEstateWebRole.Buy" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Src="Controls/SearchControlsFooterke.ascx" TagName="SearchControlsFooter"
+    TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.1-vsdoc.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <div>
+            <div id="navigation" class="nav">
+                <div id="main-left">
+                    <ul id="main_menu_main">
+                        <li>
+                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" StaticHoverStyle-CssClass="main_selected"
+                                StaticSelectedStyle-CssClass="main_selected" EnableViewState="false" IncludeStyleBlock="false"
+                                Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="/Public/Sell.aspx" Text="Sell" />
+                                </Items>
+                            </asp:Menu>
+                        </li>
+                        <li>
+                            <asp:Menu ID="NavigationMenu1" runat="server" CssClass="menu" StaticHoverStyle-CssClass="main_selected"
+                                StaticSelectedStyle-CssClass="main_selected" EnableViewState="false">
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="/Public/Rent.aspx" Text="Rent" />
+                                </Items>
+                            </asp:Menu>
+                        </li>
+                        <li>
+                            <asp:Menu ID="Menu1" runat="server" CssClass="menu" DynamicMenuStyle-CssClass="menudrop"
+                                DynamicHorizontalOffset="-20" DynamicVerticalOffset="-5" EnableViewState="false"
+                                Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="/Members/AgentProfile.aspx" Text="Directory"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </li>
+                        <li>
+                            <asp:Menu ID="Menu2" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
+                                Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="/Public/Contact.aspx" Text="Contact Us" />
+                                </Items>
+                            </asp:Menu>
+                        </li>
+                        <li>
+                            <div style="float: left">
+                                <asp:Menu ID="Menu13" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
+                                    Orientation="Horizontal">
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="/Public/Favourite.aspx" Text="Favourite" />
+                                    </Items>
+                                </asp:Menu>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="float: left">
+                                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                    <AnonymousTemplate>
+                                        <asp:Menu ID="Menu13" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false"
+                                            Orientation="Horizontal">
+                                            <Items>
+                                                <asp:MenuItem NavigateUrl="~/Public/Login.aspx" Text="Log In" />
+                                                <asp:MenuItem NavigateUrl="/Public/Register.aspx" Text="Sign Up" />
+                                            </Items>
+                                        </asp:Menu>
+                                    </AnonymousTemplate>
+                                    <LoggedInTemplate>
+                                        <div style="float: left">
+                                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                                                IncludeStyleBlock="false" Orientation="Horizontal" DynamicHoverStyle-CssClass="menudrop">
+                                                <Items>
+                                                    <asp:MenuItem NavigateUrl="#" Text="Profile">
+                                                        <asp:MenuItem NavigateUrl="/Members/Profile.aspx" Text="User Profile"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="/Members/UploadPictures.aspx" Text="Private Seller Listing">
+                                                        </asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="/Members/AgentProfile.aspx" Text="Agent Listing"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="/Members/ViewProperty.aspx" Text="View Listings"></asp:MenuItem>
+                                                    </asp:MenuItem>
+                                                </Items>
+                                            </asp:Menu>
+                                        </div>
+                                        <div style="float: left">
+                                            <span style="margin-right: 10px; color: White; top: -4px; left: -20px; line-height: 36px">
+                                                Welcome
+                                                <asp:LoginName ID="HeadLoginName" runat="server" ForeColor="White" />
+                                            </span>! <span>
+                                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="RedirectToLoginPage"
+                                                    LogoutText="Log Out" LogoutPageUrl="~/Public/Login.aspx" OnLoggingOut="Login_out" />
+                                            </span>
+                                        </div>
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        <Services>
+            <asp:ServiceReference Path="WebServices/AutoComplete.asmx" />
+        </Services>
+    </asp:ToolkitScriptManager>
+    <div class="spacebetweenmenucontents">
+        <div id="logomenu">
+            <img src="../images/logo.png" alt="" title="" />
+        </div>
+        <div id="head_text">
+            <h1>
+                Think property, think ePropertySearch</h1>
+        </div>
+    </div>
+    <div class="page">
+        <div class="Search">
+            <div class="Search-inner">
+                <div id="head_text_small">
+                    <h2>
+                        Find property for sale in:</h2>
+                </div>
+                <br />
+                <div id="searcharea">
+                    <div class="searchbox">
+                        <asp:TextBox runat="server" ID="txtSearchBuy"></asp:TextBox><asp:AutoCompleteExtender
+                            ID="AutoCompleteExtender1" runat="server" MinimumPrefixLength="2" CompletionInterval="1000"
+                            EnableCaching="true" CompletionSetCount="1" ServicePath="WebServices/AutoComplete.asmx"
+                            TargetControlID="txtSearchBuy" ServiceMethod="GetCompletionList">
+                        </asp:AutoCompleteExtender>
+                        <asp:ImageButton class="searchbutton" runat="server" ID="imgBuySearch" ImageUrl="~/Images/dot.png"
+                            AlternateText="Search" OnClick="Search_Click" />
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="radiobuttons">
+                        <asp:RadioButton Font-Size="17px" ForeColor="White" ID="rdnSearchBuy" Text="Buy:"
+                            CssClass="radios" TextAlign="Left" runat="server" ToolTip="Buy" Checked="true"
+                            GroupName="SearchOption"></asp:RadioButton>
+                        <asp:RadioButton Font-Size="17px" ForeColor="White" runat="server" Text="Rent:" TextAlign="Left"
+                            CssClass="radios" ID="rbnSearchRent" GroupName="SearchOption"></asp:RadioButton>
+                        <asp:RadioButton Font-Size="17px" ForeColor="White" runat="server" Text="Find agent:"
+                            CssClass="radios" TextAlign="Left" ID="rbnSearchAgent" GroupName="SearchOption">
+                        </asp:RadioButton>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="mainareas">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <uc1:SearchControlsFooter ID="SearchControlsFooter1" runat="server" />
+    </form>
+</body>
+</html>

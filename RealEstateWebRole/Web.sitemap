@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="~/Public/Sell.aspx" title="Sell"  description="">
+
+    <siteMapNode url="~/Public/Rent.aspx" title="Buy"  description="" />
+    <siteMapNode url="#1" title="Services"  description="" >
+      <siteMapNode url="~/Public/AgentResults.aspx?type=Listing Agency" title="Listing Agency"/>
+      <siteMapNode url="~/Public/AgentResults.aspx?type=Estate Agency" title="Estate Agency"/>
+      <siteMapNode url="~/Public/AgentResults.aspx?type=Home Improvement" title="Home Improvement"/>
+      <siteMapNode url="~/Members/AgentProfile.aspx" title="Join the Directory"/>
+    </siteMapNode>
+    <siteMapNode url="#" title="Profile">
+      <siteMapNode url="~/Members/Profile.aspx" title="User Profile" description =""/>
+      <siteMapNode url="~/Members/ViewProperty.aspx" title="View Listings" description =""/>
+      <siteMapNode url="~/Members/DashBoard.aspx" title="Manage Searches and Social media" description =""/>
+    </siteMapNode>
+    <!--<siteMapNode url="~/Contact.aspx" title="Contact Us"/>
+    <siteMapNode url="~/Account/Register.aspx" title="Sign up"/>
+    <siteMapNode url="~/Account/Login.aspx" title="Login"/>
+    <siteMapNode url="~/Favourites.aspx" title="Favourite"/>-->
+  </siteMapNode>
+</siteMap>
