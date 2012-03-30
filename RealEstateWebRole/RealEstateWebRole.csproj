@@ -182,7 +182,6 @@
     <Content Include="Admin\Details.aspx" />
     <Content Include="bin\AntiXSSLibrary.dll" />
     <Content Include="bin\AWSSDK.dll" />
-    <Content Include="bin\AWSSDK.xml" />
     <Content Include="bin\HtmlSanitizationLibrary.dll" />
     <Content Include="bin\Microsoft.ApplicationServer.Http.dll" />
     <Content Include="bin\Microsoft.ApplicationServer.HttpEnhancements.dll" />
