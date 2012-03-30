@@ -14,6 +14,8 @@
     <AssemblyName>RealEstateWebRole</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,13 +80,20 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Windows.old.000\Users\Kapambwe\Downloads\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+      <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\AntiXSSLibrary.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK, Version=1.4.6.2, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\AWS SDK for .NET\bin\AWSSDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationServer.Http">
       <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.dll</HintPath>
@@ -117,6 +126,9 @@
     <Reference Include="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\RealEstateLibraries\RealEstateLibraries\bin\Debug\RealEstateLibraries.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition">
@@ -163,11 +175,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".nuget\NuGet.exe" />
     <Content Include="About.aspx" />
     <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\AgentsList.aspx" />
     <Content Include="Admin\Details.aspx" />
-    <Content Include="bin\LinqToTwitter.dll" />
+    <Content Include="bin\AntiXSSLibrary.dll" />
+    <Content Include="bin\AWSSDK.dll" />
+    <Content Include="bin\AWSSDK.xml" />
+    <Content Include="bin\HtmlSanitizationLibrary.dll" />
     <Content Include="bin\Microsoft.ApplicationServer.Http.dll" />
     <Content Include="bin\Microsoft.ApplicationServer.HttpEnhancements.dll" />
     <Content Include="bin\Microsoft.Data.Spatial.dll" />
@@ -179,8 +195,12 @@
     <Content Include="bin\Microsoft.Runtime.Serialization.Internal.dll" />
     <Content Include="bin\Microsoft.Server.Common.dll" />
     <Content Include="bin\Microsoft.ServiceModel.Internal.dll" />
+    <Content Include="bin\RealEstateLibraries.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\RealEstateWebRole.dll" />
     <Content Include="bin\RealEstateWebRole.pdb" />
+    <Content Include="bin\SanitizerProviders.dll" />
     <Content Include="bin\System.ComponentModel.Composition.dll" />
     <Content Include="bin\System.ComponentModel.DataAnnotations.dll" />
     <Content Include="bin\System.Data.OData.dll" />
@@ -285,6 +305,46 @@
     <Content Include="Members\maps\previewMap.aspx" />
     <Content Include="Members\maps\PropertyPictures.aspx" />
     <Content Include="Members\maps\uploadMap.aspx" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\AjaxControlToolkit.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\SanitizerProviders\AntiXSSLibrary.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\SanitizerProviders\HtmlSanitizationLibrary.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\SanitizerProviders\SanitizerProviders.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\35\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\AjaxControlToolkit.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\AntiXSSLibrary.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\HtmlSanitizationLibrary.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\SanitizerProviders.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="packages\AjaxControlToolkit.4.1.51116\lib\40\zh-CHT\AjaxControlToolkit.resources.dll" />
     <Content Include="packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.dll" />
     <Content Include="packages\HttpClient.0.6.0\lib\40\Microsoft.Net.Http.Formatting.xml" />
     <Content Include="packages\HttpClient.0.6.0\lib\40\System.Net.Http.dll" />
@@ -292,6 +352,8 @@
     <Content Include="packages\JsonValue.0.6.0\lib\40\Microsoft.Json.dll" />
     <Content Include="packages\JsonValue.0.6.0\lib\40\Microsoft.Json.xml" />
     <Content Include="packages\JsonValue.0.6.0\lib\40\Microsoft.Server.Common.dll" />
+    <Content Include="packages\System.Web.Providers.1.0.1\lib\Net40\System.Web.Providers.dll" />
+    <Content Include="packages\System.Web.Providers.1.0.1\readme.html" />
     <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.dll" />
     <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.ApplicationServer.Http.xml" />
     <Content Include="packages\WebApi.0.6.0\lib\40-Full\Microsoft.Runtime.Serialization.Internal.dll" />
@@ -794,23 +856,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="aspnet_client\system_web\4_0_30319\" />
-    <Folder Include="bin\ar\" />
-    <Folder Include="bin\cs\" />
-    <Folder Include="bin\de\" />
-    <Folder Include="bin\en\" />
-    <Folder Include="bin\es\" />
-    <Folder Include="bin\fr\" />
-    <Folder Include="bin\he\" />
-    <Folder Include="bin\hi\" />
-    <Folder Include="bin\it\" />
-    <Folder Include="bin\ja\" />
-    <Folder Include="bin\ko\" />
-    <Folder Include="bin\nl\" />
-    <Folder Include="bin\pt\" />
-    <Folder Include="bin\ru\" />
-    <Folder Include="bin\tr-TR\" />
-    <Folder Include="bin\zh-CHS\" />
-    <Folder Include="bin\zh-CHT\" />
     <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
@@ -824,12 +869,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Members\web.config" />
+    <Content Include=".nuget\NuGet.Config" />
+    <None Include=".nuget\NuGet.targets" />
+    <None Include="packages\AjaxControlToolkit.4.1.51116\content\web.config.transform" />
     <None Include="packages\HttpClient.0.6.0\HttpClient.0.6.0.nupkg" />
     <None Include="packages\JsonValue.0.6.0\JsonValue.0.6.0.nupkg" />
     <Content Include="packages\repositories.config" />
+    <None Include="packages\System.Web.Providers.1.0.1\content\web.config.transform" />
+    <None Include="packages\System.Web.Providers.1.0.1\EULA.rtf" />
+    <None Include="packages\System.Web.Providers.1.0.1\System.Web.Providers.1.0.1.nupkg" />
     <None Include="packages\WebApi.0.6.0\content\web.config.transform" />
     <None Include="packages\WebApi.0.6.0\WebApi.0.6.0.nupkg" />
     <None Include="packages\WebApi.All.0.6.0\WebApi.All.0.6.0.nupkg" />
+    <None Include="packages\WebApi.Core.0.5.0\WebApi.Core.0.5.0.nupkg" />
     <None Include="packages\WebApi.Enhancements.0.6.0\WebApi.Enhancements.0.6.0.nupkg" />
     <None Include="packages\WebApi.OData.0.6.0\WebApi.OData.0.6.0.nupkg" />
     <None Include="Properties\Settings.settings">
@@ -861,6 +913,7 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
