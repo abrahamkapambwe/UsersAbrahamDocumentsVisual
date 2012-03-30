@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using RealEstateWebRole.Admin;
-using Microsoft.IdentityModel.Web;
+
 using System.Web.Security;
 
 namespace RealEstateWebRole
@@ -39,7 +39,7 @@ namespace RealEstateWebRole
         }
         public void Login_out(object sender, EventArgs e)
         {
-            WSFederationAuthenticationModule fam = FederatedAuthentication.WSFederationAuthenticationModule;
+           
 
             try
             {
@@ -47,7 +47,7 @@ namespace RealEstateWebRole
             }
             finally
             {
-                fam.SignOut(true);
+              
             }
 
         }

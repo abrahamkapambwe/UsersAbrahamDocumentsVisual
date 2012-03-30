@@ -8,7 +8,7 @@ using System.Net;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Threading;
-using Microsoft.IdentityModel.Claims;
+
 using System.Configuration;
 using System.Web.UI.HtmlControls;
 
@@ -36,8 +36,8 @@ namespace RealEstateWebRole.Account
             if (Page.User.Identity.IsAuthenticated)
             {
                 AnonymousUser.Visible = false;
-                IClaimsIdentity claimsIdentity = Thread.CurrentPrincipal.Identity as IClaimsIdentity;
-                ClaimsAuthenticationManager manager = new ClaimsAuthenticationManager();
+                //IClaimsIdentity claimsIdentity = Thread.CurrentPrincipal.Identity as IClaimsIdentity;
+                //ClaimsAuthenticationManager manager = new ClaimsAuthenticationManager();
 
 
             }

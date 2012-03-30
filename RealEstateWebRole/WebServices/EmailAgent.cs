@@ -9,7 +9,7 @@ using System.ServiceModel.Activation;
 using System.Web.Script.Serialization;
 using RealEstateLibraries;
 using System.Web;
-using Microsoft.IdentityModel.Claims;
+
 using System.Web.Security;
 using System.Threading;
 using System.Net;
@@ -178,18 +178,8 @@ public class EmailAgent : IEmailAgent
         string FederationForms = "";
         if (HttpContext.Current.User.Identity.IsAuthenticated)
         {
-            if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Federation"))
-            {
-                IClaimsIdentity claimsIdentity = Thread.CurrentPrincipal.Identity as IClaimsIdentity;
-                foreach (var val in claimsIdentity.Claims)
-                {
-                    if (val.ClaimType.Contains("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"))
-                    {
-                        FederationForms = val.Value;
-                    }
-                }
-            }
-            else if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
+           
+             if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
             {
                 MembershipUser membershipuser = Membership.GetUser(HttpContext.Current.User.Identity.Name);
                 FederationForms = membershipuser.Email;

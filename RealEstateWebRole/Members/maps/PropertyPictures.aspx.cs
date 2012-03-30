@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Threading;
-using Microsoft.IdentityModel.Claims;
+
 using System.Web.Security;
 using RealEstateLibraries;
 
@@ -17,18 +17,8 @@ namespace RealEstateWebRole.Members.maps
         string propertyID = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Federation"))
-            {
-                IClaimsIdentity claimsIdentity = Thread.CurrentPrincipal.Identity as IClaimsIdentity;
-                foreach (var val in claimsIdentity.Claims)
-                {
-                    if (val.ClaimType.Contains("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"))
-                    {
-                        FederationForms = val.Value;
-                    }
-                }
-            }
-            else if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
+           
+            if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
             {
                 MembershipUser membershipuser = Membership.GetUser(HttpContext.Current.User.Identity.Name);
                 FederationForms = membershipuser.Email;

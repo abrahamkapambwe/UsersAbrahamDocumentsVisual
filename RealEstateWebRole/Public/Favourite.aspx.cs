@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using RealEstateLibraries;
-using Microsoft.IdentityModel.Claims;
+
 using System.Threading;
 using System.Web.Security;
 using System.Web.UI.HtmlControls;
@@ -31,18 +31,8 @@ namespace RealEstateWebRole.Public
                 htmlmeta2.Content = "Nation daily,nation news paper kenya";
                 Page.Header.Controls.Add(htmlmeta2);
             }
-            if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Federation"))
-            {
-                IClaimsIdentity claimsIdentity = Thread.CurrentPrincipal.Identity as IClaimsIdentity;
-                foreach (var val in claimsIdentity.Claims)
-                {
-                    if (val.ClaimType.Contains("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"))
-                    {
-                        FederationForms = val.Value;
-                    }
-                }
-            }
-            else if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
+       
+           if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
             {
                 MembershipUser membershipuser = Membership.GetUser(HttpContext.Current.User.Identity.Name);
                 FederationForms = membershipuser.Email;

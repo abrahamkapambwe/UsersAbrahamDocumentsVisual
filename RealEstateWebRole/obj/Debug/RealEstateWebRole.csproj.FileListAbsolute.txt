@@ -6,4 +6,4 @@ C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateW
 C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\obj\Debug\RealEstateWebRole.pdb
 C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\RealEstateWebRole.dll
 C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\RealEstateWebRole.pdb
-C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\bin\Microsoft.IdentityModel.dll
+C:\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateAWS\RealEstateWebRole\bin\EntityDataModel.dll
