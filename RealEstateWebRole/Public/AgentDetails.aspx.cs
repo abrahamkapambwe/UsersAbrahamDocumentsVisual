@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AddressResult;
 using RealEstateLibraries;
 using System.Web.UI.HtmlControls;
 using System.Text;
@@ -36,7 +40,8 @@ namespace RealEstateWebRole.Public
         private void PopulateAgentDetails(string AgentID, string UserID)
         {
 
-            string agentmeta="";
+            string agentmeta = "";
+            string address = "";
             EstateAgentAzure estate = Search.GetAgentFromCache(Guid.Parse(AgentID));
             if (estate != null)
             {
@@ -50,6 +55,19 @@ namespace RealEstateWebRole.Public
                     agentmeta = estate.AgentAddress + ", " + estate.BusinessName + ", " + estate.City;
 
                     IEnumerable<PropertyTableAzure> propertyTable = Search.GetPropertyTablesFromCache(usertable.UserName);
+                    address = estate.AgentAddress + "+" + estate.Road + "+" + estate.City + "+" + estate.State_Prov + "ke";
+                    WebRequest request = WebRequest.Create("http://maps.googleapis.com/maps/api/geocode/json?address=" + address + " &sensor=false");
+                    WebResponse response = request.GetResponse();
+                    Stream stream = response.GetResponseStream();
+                    DataContractJsonSerializer seriler = new DataContractJsonSerializer(typeof(AddressResponse));
+                    AddressResponse resp = (AddressResponse)seriler.ReadObject(stream);
+
+                    if (resp.Results.Count() > 0)
+                    {
+                        estate.Latitude = resp.Results[0].Geometry.Location.Lat;
+                        estate.Longitude = resp.Results[0].Geometry.Location.Lng;
+                    }
+
                     imap.Attributes.Add("src", "/Public/Map/Map.aspx?lat=" + estate.Latitude + "&lng=" + estate.Longitude);
                     if (propertyTable != null)
                     {

@@ -56,6 +56,32 @@ public class AutoComplete : WebService
                     }
                 }
             }
+            if (HttpRuntime.Cache["EstateAgents"] != null)
+            {
+                CacheApprovedItems cacheestateagents = (CacheApprovedItems)HttpRuntime.Cache["SouthAfrica"];
+                var estates = from p in cacheestateagents.estateAgentlistcache
+                              select p;
+                foreach (var estate in estates)
+                {
+                    if (!string.IsNullOrWhiteSpace(estate.City))
+                    {
+                        if (estate.City.StartsWith(prefixText, StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            if (!items.Contains(estate.City.Trim() + " " + estate.State_Prov.Trim()))
+                                items.Add(estate.City + " " + estate.State_Prov.Trim());
+                        }
+                    }
+                    if (!string.IsNullOrWhiteSpace(estate.City))
+                    {
+                        if (estate.BusinessName.StartsWith(prefixText, StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            if (!items.Contains(estate.BusinessName.Trim() + " " + estate.State_Prov.Trim()))
+                                items.Add(estate.BusinessName + " " + estate.State_Prov.Trim());
+                        }
+                    }
+
+                }
+            }
             //var attribute = from a in cacheapproveditems.attributelistcache
             //                select a;
             //foreach (var a in attribute)
