@@ -175,7 +175,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".nuget\NuGet.exe" />
     <Content Include="About.aspx" />
     <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\AgentsList.aspx" />
@@ -217,6 +216,7 @@
     <Content Include="Controls\SearchControlsRentFooterke.ascx" />
     <Content Include="Controls\SearchMap.ascx" />
     <Content Include="Controls\SearchMapke.ascx" />
+    <Content Include="default.aspx" />
     <Content Include="EmailTemplates\SendAgentEmails.aspx" />
     <Content Include="images\2-column-middle-bg.png" />
     <Content Include="images\ajax-loader.gif" />
@@ -557,6 +557,13 @@
     <Compile Include="Controls\SearchMapke.ascx.designer.cs">
       <DependentUpon>SearchMapke.ascx</DependentUpon>
     </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Members\maps\PayGateway.aspx.cs">
       <DependentUpon>PayGateway.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -867,9 +874,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Members\web.config" />
-    <Content Include=".nuget\NuGet.Config" />
-    <None Include=".nuget\NuGet.targets" />
     <None Include="packages\AjaxControlToolkit.4.1.51116\content\web.config.transform" />
     <None Include="packages\HttpClient.0.6.0\HttpClient.0.6.0.nupkg" />
     <None Include="packages\JsonValue.0.6.0\JsonValue.0.6.0.nupkg" />

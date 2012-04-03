@@ -11,7 +11,6 @@ C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\Microsoft.Json.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\RealEstateLibraries.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateWebRole.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateWebRole.pdb
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Debug\RealEstateWebRole.csprojResolveAssemblyReference.cache
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Debug\RealEstateWebRole.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Debug\RealEstateWebRole.pdb
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\EntityDataModel.dll
