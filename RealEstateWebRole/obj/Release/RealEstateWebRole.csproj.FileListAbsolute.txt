@@ -20,6 +20,6 @@ C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\ru\AjaxControlToolkit.resou
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\tr-TR\AjaxControlToolkit.resources.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\zh-CHS\AjaxControlToolkit.resources.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.csprojResolveAssemblyReference.cache
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.pdb
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.csprojResolveAssemblyReference.cache
