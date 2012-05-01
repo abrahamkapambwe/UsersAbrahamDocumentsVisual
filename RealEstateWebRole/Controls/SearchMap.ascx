@@ -83,18 +83,39 @@
         }
     </script>
     <asp:Label runat="server" ID="lblTitle"></asp:Label>
-    <div class="searchmaplinks" style="border:0px">
+    <div class="searchmaplinks" style="border: 0px">
         <table>
             <tr>
-                <td style="width:500px; margin-right:30px">
+                <td style="width: 500px; margin-right: 30px">
+                    <asp:ListView runat="server" ID="ltvThumbnail" OnItemDataBound="ltvThumbnail_itemDataBound"
+                        GroupItemCount="3">
+                        <LayoutTemplate>
+                            <table id="Table1" runat="server">
+                                <tr runat="server" id="groupPlaceHolder">
+                                </tr>
+                            </table>
+                        </LayoutTemplate>
+                        <GroupTemplate>
+                            <tr id="Tr1" runat="server">
+                                <td runat="server" id="itemPlaceHolder">
+                                </td>
+                            </tr>
+                        </GroupTemplate>
+                        <ItemTemplate>
+                            <td>
+                                <asp:HyperLink runat="server" Width="90px" Height="90px" ID="imgLogoEstate" />
+                            </td>
+                        </ItemTemplate>
+                    </asp:ListView>
                     <div runat="server" visible="false">
                         <img src="/images/SouthAfricaMap.jpeg" alt="South Africa" usemap="#imagemap" border="0" />
                         <map id="" name="imagemap">
                             <area alt="Eastern Cape" id="areaEasternCape" onmouseout="javascript:hideArea(3);"
                                 onmouseover="javascript:showArea(3);" coords="225,204,225,211,219,215,202,228,194,236,182,240,183,248,171,259,187,268,193,277,207,280,243,274,284,245,319,219,311,207,301,196,304,207,292,201,286,196,273,207,265,199,251,204,231,202"
-                                href="../Public/SearchResult?SearchTerm=Eastern Cape&SearchType=5"  shape="poly" />
+                                href="../Public/SearchResult?SearchTerm=Eastern Cape&SearchType=5" shape="poly" />
                             <area alt="KwaZulu Natal" id="areaNatal" coords="316,131,316,145,304,157,310,166,306,179,299,193,313,192,328,211,345,176,369,157,376,122,366,119,359,129"
-                                href="../Public/SearchResult?SearchTerm=KwaZulu Natal&SearchType=5" shape="poly" onmouseover="javascript:showArea(2);" onmouseout="javascript:hideArea(2);" />
+                                href="../Public/SearchResult?SearchTerm=KwaZulu Natal&SearchType=5" shape="poly"
+                                onmouseover="javascript:showArea(2);" onmouseout="javascript:hideArea(2);" />
                             <area alt="Free State" id="areaFreeState" onmouseover="javascript:showArea(6);" onmouseout="javascript:hideArea(6);"
                                 coords="220,140,218,158,211,171,231,193,253,194,269,189,262,170,289,148,301,152,313,126,287,115,262,111,237,129,224,136"
                                 href="../Public/SearchResult?SearchTerm=Free State&SearchType=5" shape="poly" />
@@ -119,31 +140,40 @@
                         </map>
                     </div>
                 </td>
-                <td class="searchprovince" style="background:#fff; background-image:none; border:0px>
-                    <div style="padding:10px">
+                <td class="searchprovince" style="background: #fff; background-image: none; border: 0px">
+                    <div style="padding: 10px">
                         <div id="gautenglink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Gauteng&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gauteng</a></div>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Gauteng&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gauteng</a></div>
                         <div id="kwazulunatallink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=KwaZulu Natal&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kwazulu Natal</a>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=KwaZulu Natal&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kwazulu Natal</a>
                         </div>
                         <div id="easterncapelink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Eastern Cape&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eastern Cape</a>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Eastern Cape&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eastern Cape</a>
                         </div>
                         <div id="mpumalangalink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Mpumalanga&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mpumalanga</a>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Mpumalanga&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mpumalanga</a>
                         </div>
                         <div id="limpopolink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Limpopo&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limpopo</a></div>
-                            <div id="freestatelink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Free State&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free State</a></div>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Limpopo&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limpopo</a></div>
+                        <div id="freestatelink">
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Free State&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free State</a></div>
                         <div id="northwestlink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=North West&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North West</a>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=North West&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North West</a>
                         </div>
                         <div id="northerncapelink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Northern Cape&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Northern Cape</a>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Northern Cape&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Northern Cape</a>
                         </div>
                         <div id="westerncapelink">
-                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Western Cape&SearchType=5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Western Cape</a></div>
+                            <a class="search_links" href="../Public/SearchResult.aspx?SearchTerm=Western Cape&SearchType=5">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Western Cape</a></div>
                     </div>
                 </td>
             </tr>

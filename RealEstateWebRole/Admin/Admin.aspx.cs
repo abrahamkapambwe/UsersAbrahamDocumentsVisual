@@ -147,6 +147,8 @@ namespace RealEstateWebRole.Account
                 PreviewPropertyTableAzure preview = new PreviewPropertyTableAzure();
                 preview.PropertyID = Guid.Parse(propid);
                 preview.Approved = chkApprove.Checked;
+                preview.Reported = chkReported.Checked;
+                preview.Expired = chkExpired.Checked;
                 previewlist.Add(preview);
             }
             Search.UpdatePreviewPropertyTable(previewlist);

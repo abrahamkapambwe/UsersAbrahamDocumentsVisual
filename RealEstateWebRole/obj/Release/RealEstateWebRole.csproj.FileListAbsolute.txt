@@ -1,8 +1,5 @@
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\Microsoft.Json.dll
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\RealEstateLibraries.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateWebRole.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateWebRole.pdb
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\AjaxControlToolkit.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\EntityDataModel.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\ar\AjaxControlToolkit.resources.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\cs\AjaxControlToolkit.resources.dll
@@ -20,6 +17,8 @@ C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\ru\AjaxControlToolkit.resou
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\tr-TR\AjaxControlToolkit.resources.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\zh-CHS\AjaxControlToolkit.resources.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\zh-CHT\AjaxControlToolkit.resources.dll
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.csprojResolveAssemblyReference.cache
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.pdb
+C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.csprojResolveAssemblyReference.cache
+C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateLibraries.pdb
+C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\Microsoft.Json.dll

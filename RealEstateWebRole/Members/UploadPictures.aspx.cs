@@ -800,7 +800,7 @@ namespace RealEstateWebRole.Account
             prop.City = txtCity.Text;
             prop.Province = ddlProvince.SelectedValue;
             prop.Country = txtCountry.Text;
-            prop.Added = new DateTime();
+            prop.Added = DateTime.Now;
             prop.UserName = FederationForms;
             prop.WebReference = hdfWebrefence.Value;
             prop.Longitude = "";
@@ -842,7 +842,7 @@ namespace RealEstateWebRole.Account
             {
                 if (string.IsNullOrEmpty(hdfLatitude.Value) && string.IsNullOrEmpty(hdfLongitude.Value))
                 {
-                    address = txtStreetnumber.Text + "+" + txtStreetname.Text + "+" + txtSuburb.Text + "+" + ddlProvince.SelectedValue + "+" + txtCity.Text + "+" + "za";
+                    address = txtStreetnumber.Text + "+" + txtStreetname.Text + "+" + txtSuburb.Text + "+" + ddlProvince.SelectedValue + "+" + txtCity.Text + "+" + "ke";
                     WebRequest request = WebRequest.Create("http://maps.googleapis.com/maps/api/geocode/json?address=" + address + " &sensor=false");
                     WebResponse response = request.GetResponse();
                     Stream stream = response.GetResponseStream();
@@ -1554,10 +1554,10 @@ namespace RealEstateWebRole.Account
                     break;
                 case "images":
                     LoadSelectedState(4);
-                    int? propID = 0;
+                    Guid propID=new Guid();
                     if (Session["propID"] != null)
                     {//Populate the propertyid
-                        propID = (int?)Session["propID"];
+                        propID = (Guid)Session["propID"];
 
 
                     }
@@ -1565,7 +1565,7 @@ namespace RealEstateWebRole.Account
                     {//If the propertyid in not available from the session get from the hidden control
                         if (!string.IsNullOrEmpty(hdfPropertyID.Value))
                         {
-                            propID = Convert.ToInt32(hdfPropertyID.Value);
+                            propID = Guid.Parse(hdfPropertyID.Value);
                         }
 
 

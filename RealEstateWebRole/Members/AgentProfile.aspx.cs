@@ -18,7 +18,7 @@ namespace RealEstateWebRole.Account
         private string FederationForms = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
             if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
             {
                 MembershipUser membershipuser = Membership.GetUser(HttpContext.Current.User.Identity.Name);
@@ -62,16 +62,29 @@ namespace RealEstateWebRole.Account
 
                 EstateAgentAzure estate = Search.GetAgentDetailsByID(user.UserName);
                 if (estate == null)
-                    Search.AddEstateAgent(estate, user.UserName);
+                {
+                    SaveEstate(user);
+                }
             }
             else
             {
                 EstateAgentAzure estate = Search.GetAgentDetailsByID(user.UserName);
                 if (estate == null)
-                    Search.AddEstateAgent(estate, user.UserName);
-
+                {
+                    SaveEstate(user);
+                }
             }
         }
+
+        private static void SaveEstate(UsersTableAzure user)
+        {
+            EstateAgentAzure estate;
+            estate = new EstateAgentAzure();
+            estate.Username = user.UserName;
+            estate.UserID = Convert.ToString(user.UserID);
+            Search.AddEstateAgent(estate, Guid.NewGuid());
+        }
+
         private void LoadData()
         {
             UsersTableAzure user = Search.GetUserProfile(FederationForms);
@@ -246,7 +259,7 @@ namespace RealEstateWebRole.Account
             estate.IPAddress = Request.UserHostAddress;
 
             Search.UpdateContact(user, hdfUserID.Value);
-            Search.AddEstateAgent(estate, hdfEstateID.Value);
+            Search.AddEstateAgent(estate, Guid.Parse(hdfEstateID.Value));
             lblResult.Text = "Successfully saved";
             // Response.Redirect("~/Members/UploadPictures.aspx?FromAgent=1");
         }

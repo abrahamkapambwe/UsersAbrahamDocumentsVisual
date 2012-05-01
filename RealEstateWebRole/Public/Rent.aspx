@@ -8,11 +8,10 @@
     <div class="sellrenttitle">
         <div style="margin-bottom: 5px">
             <div style="font-size: 0.8em">
-                Estate agent or selling your property privately?ePropertySearch offer
-                you more choice when searching for properties plus an amazing pool of potential
-                buyers to advertise to. It’s your key to a great property renting experience.Submit
-                as many listings as you like. <b style="color: Red">List your properties for free with
-                    no setup cost</b></div>
+                Estate agent or selling your property privately?ePropertySearch offer you more choice
+                when searching for properties plus an amazing pool of potential buyers to advertise
+                to. It’s your key to a great property renting experience.Submit as many listings
+                as you like. <b style="color: Red">List your properties for free with no setup cost</b></div>
         </div>
         <div class="leadTitle">
             <span class="leadText">
@@ -20,6 +19,9 @@
  for rent on ePropertySearch for free!" NavigateUrl="~/Members/UploadPictureske.aspx"></asp:HyperLink>
             </span>
         </div>
+    </div>
+    <div>
+        
     </div>
     <uc2:SearchMap ID="SearchMap1" runat="server" />
     <div id="latestproperty">

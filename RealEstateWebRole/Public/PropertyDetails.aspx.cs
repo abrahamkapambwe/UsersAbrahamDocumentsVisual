@@ -105,6 +105,7 @@ namespace RealEstateWebRole.Public
                     }
                     else
                     {
+                        EstateAg.Visible = false;
                         imgAgentThumb.Visible = false;
                     }
 

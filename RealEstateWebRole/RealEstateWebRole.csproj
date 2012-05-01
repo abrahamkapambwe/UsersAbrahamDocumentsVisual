@@ -125,7 +125,7 @@
     </Reference>
     <Reference Include="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\RealEstateLibraries\RealEstateLibraries\bin\Debug\RealEstateLibraries.dll</HintPath>
+      <HintPath>..\..\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateLibraries\RealEstateLibraries\bin\Debug\RealEstateLibraries.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders">
       <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
@@ -179,9 +179,22 @@
     <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\AgentsList.aspx" />
     <Content Include="Admin\Details.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\AntiXSSLibrary.dll" />
+    <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\AWSSDK.dll" />
+    <Content Include="bin\bin\Microsoft.Json.dll" />
+    <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\EntityDataModel.dll" />
+    <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\hi\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\HtmlSanitizationLibrary.dll" />
+    <Content Include="bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ko\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\Microsoft.ApplicationServer.Http.dll" />
     <Content Include="bin\Microsoft.ApplicationServer.HttpEnhancements.dll" />
     <Content Include="bin\Microsoft.Data.Spatial.dll" />
@@ -193,11 +206,13 @@
     <Content Include="bin\Microsoft.Runtime.Serialization.Internal.dll" />
     <Content Include="bin\Microsoft.Server.Common.dll" />
     <Content Include="bin\Microsoft.ServiceModel.Internal.dll" />
-    <Content Include="bin\RealEstateLibraries.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\RealEstateLibraries.dll" />
+    <Content Include="bin\RealEstateLibraries.pdb" />
     <Content Include="bin\RealEstateWebRole.dll" />
     <Content Include="bin\RealEstateWebRole.pdb" />
+    <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\SanitizerProviders.dll" />
     <Content Include="bin\System.ComponentModel.Composition.dll" />
     <Content Include="bin\System.ComponentModel.DataAnnotations.dll" />
@@ -205,6 +220,9 @@
     <Content Include="bin\System.Net.Http.dll" />
     <Content Include="bin\System.Web.Providers.dll" />
     <Content Include="bin\Telerik.Web.UI.dll" />
+    <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
     <Content Include="Controls\Payments.ascx" />
     <Content Include="Controls\SearchControls.ascx" />
     <Content Include="Controls\SearchControlsFooterke.ascx" />
@@ -862,6 +880,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="aspnet_client\system_web\4_0_30319\" />
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x64\Release\" />
     <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
@@ -871,7 +891,9 @@
     <Content Include="UploadPictures.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages\AjaxControlToolkit.4.1.51116\content\web.config.transform" />

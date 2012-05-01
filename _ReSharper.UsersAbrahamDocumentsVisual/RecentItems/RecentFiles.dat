@@ -1,9 +1,62 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:Web.config" caret="4406" fromTop="10" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:Global.asax.cs" caret="1156" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Sell.aspx.cs" caret="3055" fromTop="23" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Admin/f:Admin.aspx.cs" caret="5687" fromTop="11" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:PreviewControl.ascx.cs" caret="957" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx.cs" caret="2161" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx" caret="6224" fromTop="8" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Sell.aspx" caret="1550" fromTop="20" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx" caret="5756" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:default.aspx" caret="0" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Rent.aspx" caret="1304" fromTop="4" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMap.ascx.cs" caret="1287" fromTop="25" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMap.ascx" caret="5988" fromTop="22" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Rent.aspx.cs" caret="3339" fromTop="11" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:PropertyDetails.aspx.cs" caret="3487" fromTop="17" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:Real.Master" caret="0" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:PropertyDetails.aspx" caret="3066" fromTop="19" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Styles/f:main.css" caret="24131" fromTop="14" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentResults.aspx.cs" caret="6257" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:WebServices/f:EmailAgent.svc" caret="0" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:WebServices/f:IEmailAgent.cs" caret="439" fromTop="1" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Members/d:maps/f:PropertyPictures.aspx" caret="0" fromTop="0" />
+    <File id="C5893997-F16C-41CB-BD12-3E9C5B5DFEF8/f:Search.cs" caret="12992" fromTop="21" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Register.aspx.cs" caret="1402" fromTop="18" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:SearchResult.aspx" caret="1173" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:Web.config" caret="3676" fromTop="14" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Members/d:maps/f:PropertyPictures.aspx.cs" caret="3371" fromTop="27" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Members/f:UploadPictures.aspx.cs" caret="50920" fromTop="16" />
+    <File id="C5893997-F16C-41CB-BD12-3E9C5B5DFEF8/f:AmazonSimpleDB.cs" caret="10894" fromTop="13" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Members/f:UploadPictures.aspx" caret="9199" fromTop="19" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:WebServices/f:AutoComplete.cs" caret="406" fromTop="0" />
   </RecentFiles>
   <RecentEdits>
-    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:Web.config" caret="4406" fromTop="10" />
-    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/f:Web.config" caret="4406" fromTop="10" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMap.ascx.cs" caret="1287" fromTop="28" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Sell.aspx.cs" caret="1340" fromTop="5" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Rent.aspx" caret="1304" fromTop="4" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Rent.aspx" caret="1485" fromTop="4" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Rent.aspx.cs" caret="1416" fromTop="4" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Rent.aspx.cs" caret="2556" fromTop="26" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx" caret="12462" fromTop="30" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx" caret="12462" fromTop="30" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMap.ascx.cs" caret="357" fromTop="7" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx.cs" caret="1289" fromTop="30" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx.cs" caret="425" fromTop="14" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx.cs" caret="1797" fromTop="17" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx.cs" caret="2478" fromTop="4" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx.cs" caret="3998" fromTop="13" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx" caret="8090" fromTop="12" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx" caret="68741" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:AgentDetails.aspx" caret="5756" fromTop="0" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx" caret="12462" fromTop="13" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchMapke.ascx" caret="5177" fromTop="14" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:SearchControlsFooterke.ascx.cs" caret="355" fromTop="14" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Members/f:UploadPictures.aspx.cs" caret="39313" fromTop="1" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Controls/f:PreviewControl.ascx.cs" caret="1064" fromTop="10" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Admin/f:Admin.aspx.cs" caret="5687" fromTop="11" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:Sell.aspx.cs" caret="3055" fromTop="23" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:PropertyDetails.aspx" caret="12355" fromTop="4" />
+    <File id="D25D2088-10FB-4835-A885-A2AF5123D2F3/d:Public/f:PropertyDetails.aspx.cs" caret="4665" fromTop="23" />
   </RecentEdits>
 </RecentFiles>

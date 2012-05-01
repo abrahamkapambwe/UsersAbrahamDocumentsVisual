@@ -16,7 +16,7 @@ namespace RealEstateWebRole
 {
     public class Global : System.Web.HttpApplication
     {
-        private const string ZA = ".za";
+        private const string ZA = ".ke";
         private static CacheApprovedItems _cachedItems;
         public static CacheApprovedItems cachedItems
         {
@@ -34,6 +34,7 @@ namespace RealEstateWebRole
             RouteTable.Routes.SetDefaultHttpConfiguration(config);
             RouteTable.Routes.MapServiceRoute<RealEstateApi>("PropertyTableAzures");
             Search.PopulatetheCache();
+            Search.PopulatetheCacheEstate();
            // PopulateTheCache();
         }
 

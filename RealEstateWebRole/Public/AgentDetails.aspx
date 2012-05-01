@@ -98,7 +98,7 @@
                                     <div style="float: left;">
                                         <div style="clear: both; margin-left: 20px; width: 250px">
                                             <div style="float: left; width: 150px">
-                                                <asp:Label runat="server" ID="lblAddressTitle"></asp:Label>
+                                                <asp:Label runat="server" ForeColor="Red" ID="lblAddressTitle"></asp:Label>
                                             </div>
                                             <div style="float: left">
                                                 <asp:Label runat="server" ID="lblAddressAgent"></asp:Label><br />
@@ -132,6 +132,7 @@
                                 <div id="listurls" runat="server">
                                 </div>
                                 <div class="description">
+                                    <asp:Label runat="server" ID="lblBussinesss" ForeColor="Red" Text="Business Name"></asp:Label>
                                     <asp:Literal runat="server" ID="ltlTitle"></asp:Literal>
                                     <br />
                                     <asp:Label runat="server" ID="lblDescription"></asp:Label>

@@ -11,6 +11,8 @@ using AddressResult;
 using RealEstateLibraries;
 using System.Web.UI.HtmlControls;
 using System.Text;
+using System.Net.Mail;
+using System.Configuration;
 
 
 namespace RealEstateWebRole.Public
@@ -45,7 +47,7 @@ namespace RealEstateWebRole.Public
             EstateAgentAzure estate = Search.GetAgentFromCache(Guid.Parse(AgentID));
             if (estate != null)
             {
-                UsersTableAzure usertable = Search.GetUserTableFromCache(Guid.Parse(estate.UserID));
+                UsersTableAzure usertable = Search.GetUserTableEstateFromCache(Guid.Parse(estate.UserID));
                 if (usertable != null)
                 {
                     hdfAgentID.Value = Convert.ToString(AgentID);
@@ -55,7 +57,7 @@ namespace RealEstateWebRole.Public
                     agentmeta = estate.AgentAddress + ", " + estate.BusinessName + ", " + estate.City;
 
                     IEnumerable<PropertyTableAzure> propertyTable = Search.GetPropertyTablesFromCache(usertable.UserName);
-                    address = estate.AgentAddress + "+" + estate.Road + "+" + estate.City + "+" + estate.State_Prov + "ke";
+                    address = estate.AgentAddress + "+" + estate.Road + "+" + estate.City + "+" + estate.State_Prov + "+ ke";
                     WebRequest request = WebRequest.Create("http://maps.googleapis.com/maps/api/geocode/json?address=" + address + " &sensor=false");
                     WebResponse response = request.GetResponse();
                     Stream stream = response.GetResponseStream();
@@ -80,7 +82,7 @@ namespace RealEstateWebRole.Public
                     }
                     hyperView.NavigateUrl = "~/Public/SearchResult.aspx?Agent=" + AgentID + "&User=" + UserID;
                     Agentlogo.ImageUrl = estate.ProfilePhotoUrl;
-                    if (propertyTable != null)
+                    if (propertyTable != null && propertyTable.Any())
                     {
                         ltlListing.Text = "Agent Property Listing";
                         lstAgentListing.DataSource = propertyTable;
@@ -246,9 +248,92 @@ namespace RealEstateWebRole.Public
             emailstring.Append(txtMessage.Text);
             emailstring.Append(";");
             emailstring.Append(hdfAgentID.Value);
-
+            string[] items = emailstring.ToString().Split(new char[] { ';' });
+            SaveToDataBaseAndEmail(items);
             
             lblResult.Text= "Email sent Successfully";
+        }
+        private void SaveToDataBaseAndEmail(string[] items)
+        {
+            AgentEmail email = new AgentEmail();
+            if (!string.IsNullOrEmpty(items[0]))
+            {
+                email.PropertyID = items[0].ToString();
+            }
+            if (!string.IsNullOrEmpty(items[1]))
+            {
+                email.UseID = items[1];
+            }
+            if (!string.IsNullOrEmpty(items[2]))
+            {
+                email.Name = items[2].ToString();
+            }
+            if (!string.IsNullOrEmpty(items[3]))
+            {
+                email.Phone = items[3].ToString();
+            }
+            if (!string.IsNullOrEmpty(items[4]))
+            {
+                email.UserEmail = items[4];
+            }
+            if (!string.IsNullOrEmpty(items[5]))
+            {
+                email.Message = items[5];
+            }
+            email.AgentID = Convert.ToString(Guid.NewGuid());
+
+
+
+
+            SendEmail(email);
+
+        }
+        private void SendEmail(AgentEmail email)
+        {
+            WebRequest request = WebRequest.Create(ConfigurationManager.AppSettings["EmailTemplate"].ToString() + "UniqueID=" + email.UniqueID);
+            WebResponse response = request.GetResponse();
+            Stream stream = response.GetResponseStream();
+
+            StreamReader readStream = new StreamReader(stream, Encoding.UTF8);
+            string result = readStream.ReadToEnd();
+
+            MailMessage mail = new MailMessage();
+
+            //AlternateView alterView = AlternateView.CreateAlternateViewFromString(result, null, "text/html");
+
+            //LinkedResource logo = new LinkedResource("");
+            //logo.ContentId = "companylogo";
+
+            //alterView.LinkedResources.Add(logo);
+
+            //mail.AlternateViews.Add(alterView);
+            mail.Body = result;
+
+            var user = (from u in Search.GetUserTablesFromCache()
+                        where u.UserID == Guid.Parse(email.UseID)
+                        select u).FirstOrDefault();
+            if (user != null)
+            {
+                mail.To.Add(new MailAddress(user.EmailAddress));
+                mail.From = new MailAddress(email.UserEmail, email.Name);
+                mail.IsBodyHtml = true;
+                mail.Subject = "Enquiry about the property";
+                try
+                {
+                    SmtpClient client = new SmtpClient();
+                    //client.Credentials = new NetworkCredential(RoleEnvironment.GetConfigurationSettingValue("EWSUserName"), RoleEnvironment.GetConfigurationSettingValue("EWSPassword"));
+                    client.Port = 25;
+                    client.Timeout = 50000;
+                    client.Host = ConfigurationManager.AppSettings["SMTP"];
+                    client.UseDefaultCredentials = false;
+                    client.Send(mail);
+                }
+                catch (Exception e)
+                {
+                    // Trace.WriteLine("Sending an email to the client", e.Message);
+                }
+            }
+
         }
         #endregion
     }

@@ -34,10 +34,30 @@ namespace RealEstateWebRole.Public
         }
         private void PopulateFeaturedProperty()
         {
+            //ltvThumbnail.DataSource = Search.GetAgentsFromCache();
+            //ltvThumbnail.DataBind();
             lstFeaturedRentProperty.DataSource = Search.GetFeaturedRentProperty();
             lstFeaturedRentProperty.DataBind();
 
         }
+        //protected void ltvThumbnail_itemDataBound(object sender,ListViewItemEventArgs e)
+        //{
+        //    if(e.Item.ItemType==ListViewItemType.DataItem)
+        //    {
+        //        if (e.Item.ItemType == ListViewItemType.DataItem)
+        //        {
+        //            EstateAgentAzure estate = (EstateAgentAzure)e.Item.DataItem;
+        //            ListViewDataItem item = (ListViewDataItem)e.Item;
+        //            HyperLink imagelogo = (HyperLink)item.FindControl("imgLogoEstate");
+        //            if (!string.IsNullOrWhiteSpace(estate.ProfilePhotoUrl) && !estate.ProfilePhotoUrl.Contains("empty_thumbnail.gif"))
+        //            {
+        //                imagelogo.ImageUrl = estate.ProfilePhotoUrl;
+        //                imagelogo.NavigateUrl = "~/Public/AgentDetails.aspx?agentID=" + estate.EstateAgentID + "&UserType=" + estate.UserID;
+        //            }
+        //        }
+               
+        //    }
+        //}
         protected void lstFeaturedProperty_itemDataBound(object sender, ListViewItemEventArgs e)
         {
             if (e.Item.ItemType == ListViewItemType.DataItem)

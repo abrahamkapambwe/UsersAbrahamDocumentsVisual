@@ -28,7 +28,7 @@ namespace RealEstateWebRole.Controls
             {
                 string propertyid = Convert.ToString(Request.QueryString["propertyId"]);
                 string userid = Convert.ToString(Request.QueryString["UserId"]);
-                PropertyTableAzure table = Search.GetPropertyTable(userid,Guid.Parse(propertyid));
+                PropertyTableAzure table = Search.GetPropertyTable(Guid.Parse(propertyid));
                 PriceTableAzure price = Search.GetPriceTable(Guid.Parse(propertyid));
                
 

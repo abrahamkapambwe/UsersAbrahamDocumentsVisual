@@ -254,7 +254,7 @@
                                     <div style="margin-left: 13px; margin-top: 15px">
                                         <asp:HyperLink runat="server" ID="hyperView" Text="Arrange Viewing" NavigateUrl="#"></asp:HyperLink></div>
                                     <div>
-                                        <asp:HyperLink CssClass="button_arrange" runat="server" Visible="true" ID="hyperFriend" Text="Email your friend"
+                                        <asp:HyperLink CssClass="button_arrange" runat="server" Visible="false" ID="hyperFriend" Text="Email your friend"
                                             NavigateUrl="#01"></asp:HyperLink></div>
                                 </div>
                             </div>

@@ -36,10 +36,12 @@ namespace RealEstateWebRole.Public
 
         private void PopulateFeaturedProperty()
         {
+            
             lstFeaturedProperty.DataSource = Search.GetFeaturedSaleProperty();
             lstFeaturedProperty.DataBind();
 
         }
+        
         protected void lstFeaturedProperty_itemDataBound(object sender, ListViewItemEventArgs e)
         {
             if (e.Item.ItemType == ListViewItemType.DataItem)
@@ -50,7 +52,7 @@ namespace RealEstateWebRole.Public
                 Label lblPropertyTypeArea = (Label)item.FindControl("lblPropertyTypeArea");
                 Label lblPrice = (Label)item.FindControl("lblPropertyPrice");
                 Label lblTimeAdded = (Label)item.FindControl("lblTimeAdded");
-                if (table.ImageUrlAzures != null && table.ImageUrlAzures.Count>0)
+                if (table.ImageUrlAzures != null && table.ImageUrlAzures.Count > 0)
                 {
                     var imgUrl = (from url in table.ImageUrlAzures
                                   select url).First();
@@ -61,7 +63,7 @@ namespace RealEstateWebRole.Public
 
                 lblPropertyTypeArea.Text = CheckContainHomeType(table.PriceTableAzure.Attributes) + " " + table.PropertyType + " in " + table.City;
                 sellmetaTag = lblPropertyTypeArea.Text + " at " + "Kshs" + table.PriceTableAzure.MonthlyRental + ",";
-                lblPrice.Text = "Kshs" + table.PriceTableAzure.MonthlyRental;
+                lblPrice.Text = "Kshs " + table.PriceTableAzure.MonthlyRental;
                 int hour = (DateTime.Now - table.Added).Hours;
                 //lblTimeAdded.Text = "Added " + hour + "hours ago";
             }

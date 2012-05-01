@@ -1,0 +1,8 @@
+<Modules>
+  <Module PersistentId="D25D2088-10FB-4835-A885-A2AF5123D2F3" ModuleId="RealEstateWebRole" />
+  <Module PersistentId="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="RealEstateLibraries" />
+  <Module PersistentId="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="RealEstateLibraries_1" />
+  <Module PersistentId="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="RealEstateLibraries_2" />
+  <Module PersistentId="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="RealEstateLibraries_3" />
+  <Module PersistentId="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="RealEstateLibraries_4" />
+</Modules>
