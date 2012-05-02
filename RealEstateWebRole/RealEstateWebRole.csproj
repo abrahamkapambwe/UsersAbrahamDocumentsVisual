@@ -215,7 +215,6 @@
     <Content Include="bin\RealEstateLibraries.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="bin\RealEstateLibraries.pdb" />
     <Content Include="bin\RealEstateWebRole.dll" />
     <Content Include="bin\RealEstateWebRole.pdb" />
     <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
