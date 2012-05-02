@@ -15,6 +15,8 @@ namespace RealEstateWebRole
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
         }
       
         public void Search_Click(object sender, ImageClickEventArgs e)
