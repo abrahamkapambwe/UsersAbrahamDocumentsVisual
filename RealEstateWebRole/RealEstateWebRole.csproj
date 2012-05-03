@@ -123,8 +123,7 @@
     <Reference Include="Microsoft.ServiceModel.Internal">
       <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.ServiceModel.Internal.dll</HintPath>
     </Reference>
-    <Reference Include="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="RealEstateLibraries">
       <HintPath>..\..\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateLibraries\RealEstateLibraries\bin\Debug\RealEstateLibraries.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders">
@@ -212,9 +211,6 @@
     <Content Include="bin\Microsoft.ServiceModel.Internal.dll" />
     <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\RealEstateLibraries.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="bin\RealEstateWebRole.dll" />
     <Content Include="bin\RealEstateWebRole.pdb" />
     <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />

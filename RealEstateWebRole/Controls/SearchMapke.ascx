@@ -93,7 +93,7 @@
                         Featured Agent</div>
                     <br />
                     <asp:ListView runat="server" ID="ltvThumbnail" OnItemDataBound="ltvThumbnail_itemDataBound"
-                        GroupItemCount="3">
+                        GroupItemCount="2">
                         <LayoutTemplate>
                             <table id="Table1" runat="server">
                                 <tr runat="server" id="groupPlaceHolder">
@@ -107,7 +107,7 @@
                             </tr>
                         </GroupTemplate>
                         <ItemTemplate>
-                            <td>
+                            <td style="padding: 5px">
                                 <asp:HyperLink runat="server" Width="90px" Height="90px" ID="imgLogoEstate" />
                             </td>
                         </ItemTemplate>
