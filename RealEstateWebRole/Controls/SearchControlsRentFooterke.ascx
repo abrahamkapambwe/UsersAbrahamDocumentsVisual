@@ -15,7 +15,7 @@
                         class="footeralist">Thika</a></span><br />
                     <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Central&SearchType=2&City=Kiambu"
                         class="footeralist">Kiambu</a></span><br />
-                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Western_Cape&SearchType=2&City=Nyandarua"
+                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Central&SearchType=2&City=Nyandarua"
                         class="footeralist">Nyandarua </a></span>
                 </div>
             </td>
@@ -88,14 +88,14 @@
                 <div>
                     <div>
                         <span class="headlist">Property for Rent in Western Province</span></div>
-                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Nairobi&SearchType=2&City=Chiwele"
+                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Western&SearchType=2&City=Chiwele"
                         class="footeralist">Chiwele</a></span><br />
-                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Nairobi&SearchType=2&City=Mukuyuni"
+                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Western&SearchType=2&City=Mukuyuni"
                         class="footeralist">Mukuyuni</a></span><br />
-                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Nairobi&SearchType=2&City=Busia"
+                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Western&SearchType=2&City=Busia"
                         class="footeralist">Busia</a> </span>
                     <br />
-                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Nairobi&SearchType=2&City=Hamisi"
+                    <span style="margin-bottom: 5px"><a href="../Public/SearchResult.aspx?SearchTerm=Western&SearchType=2&City=Hamisi"
                         class="footeralist">Hamisi</a> </span>
                 </div>
             </td>

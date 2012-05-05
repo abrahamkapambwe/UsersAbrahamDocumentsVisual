@@ -234,6 +234,9 @@
     <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\zh-CHS\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="Controls\SearchControlsFooterzm.ascx" />
+    <Content Include="Controls\SearchMapzm.ascx" />
+    <Content Include="Controls\SearchControlsRentFooterzm.ascx" />
     <Content Include="Controls\Payments.ascx" />
     <Content Include="Controls\SearchControls.ascx" />
     <Content Include="Controls\SearchControlsFooterke.ascx" />
@@ -515,6 +518,27 @@
     </Compile>
     <Compile Include="AgentDetails.Master.designer.cs">
       <DependentUpon>AgentDetails.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFooterzm.ascx.cs">
+      <DependentUpon>SearchControlsFooterzm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsFooterzm.ascx.designer.cs">
+      <DependentUpon>SearchControlsFooterzm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchMapzm.ascx.cs">
+      <DependentUpon>SearchMapzm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchMapzm.ascx.designer.cs">
+      <DependentUpon>SearchMapzm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchControlsRentFooterzm.ascx.cs">
+      <DependentUpon>SearchControlsRentFooterzm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchControlsRentFooterzm.ascx.designer.cs">
+      <DependentUpon>SearchControlsRentFooterzm.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Payments.ascx.cs">
       <DependentUpon>Payments.ascx</DependentUpon>

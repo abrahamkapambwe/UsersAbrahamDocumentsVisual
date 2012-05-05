@@ -167,11 +167,11 @@ namespace RealEstateWebRole
                             list.Value = i.ToString();
                             if (i.ToString() == "10000000")
                             {
-                                list.Text = "Kshs" + i.ToString() + "+";
+                                list.Text = "Ksh " + i.ToString() + "+";
                             }
                             else
                             {
-                                list.Text = "Kshs" + i.ToString();
+                                list.Text = "Ksh " + i.ToString();
                             }
                             ddlMinimum.Items.Add(list);
                             ddlMaximum.Items.Add(list);
@@ -187,11 +187,11 @@ namespace RealEstateWebRole
                             list.Value = i.ToString();
                             if (i.ToString() == "20000")
                             {
-                                list.Text = "Kshs" + i.ToString() + "+";
+                                list.Text = "Ksh " + i.ToString() + "+";
                             }
                             else
                             {
-                                list.Text = "Kshs" + i.ToString();
+                                list.Text = "Ksh " + i.ToString();
                             }
                             ddlMinimum.Items.Add(list);
                             ddlMaximum.Items.Add(list);
