@@ -8,7 +8,7 @@ C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\AjaxControlToolkit.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\AWSSDK.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\System.Web.Providers.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\Telerik.Web.UI.dll
-C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateLibraries.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\RealEstateLibraries.pdb
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\RealEstateLibraries.dll
 C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\bin\bin\RealEstateLibraries.pdb
+C:\UsersAbrahamDocumentsVisual\RealEstateWebRole\obj\Release\RealEstateWebRole.csprojResolveAssemblyReference.cache

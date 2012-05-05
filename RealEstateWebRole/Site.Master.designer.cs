@@ -172,6 +172,6 @@ namespace RealEstateWebRole {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl SearchControls1;
+        protected global::RealEstateWebRole.Controls.SearchControlsFooterke SearchControls1;
     }
 }

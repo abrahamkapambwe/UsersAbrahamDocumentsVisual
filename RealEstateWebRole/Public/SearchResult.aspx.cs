@@ -75,7 +75,7 @@ namespace RealEstateWebRole
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
 
             //this.Master.SearchClickedEvent += new Admin.SearchListEventHandler(Master_SearchClickedEvent);
             if (!IsPostBack)
@@ -134,7 +134,7 @@ namespace RealEstateWebRole
                 }
                 else if (Request.QueryString["Agent"] != null && Request.QueryString["User"] != null)
                 {
-                    string  AgentID = Convert.ToString(Request.QueryString["Agent"]);
+                    string AgentID = Convert.ToString(Request.QueryString["Agent"]);
                     string UserID = Convert.ToString(Request.QueryString["User"]);
                     Searchparam.AgentID = AgentID;
                     Searchparam.UserID = UserID;
@@ -154,49 +154,52 @@ namespace RealEstateWebRole
                 itemMin.Text = "No Maximum";
                 itemMin.Value = "No Maximum";
                 ddlMaximum.Items.Add(itemMin);
-                if (Request.UrlReferrer.AbsolutePath.Contains("Sell.aspx") || searchType.Contains("1"))
-                {
-                    int i = 50000;
-                    while (i <= 10000000)
-                    {
-                        ListItem list = new ListItem();
-                        // list.Value = String.Format("## ### ###", i.ToString());
-                        list.Value = i.ToString();
-                        if (i.ToString() == "10000000")
-                        {
-                            list.Text = "Kshs" + i.ToString() + "+";
-                        }
-                        else
-                        {
-                            list.Text = "Kshs" + i.ToString();
-                        }
-                        ddlMinimum.Items.Add(list);
-                        ddlMaximum.Items.Add(list);
-                        i = i + 50000;
-                    }
-                }
-                else if (Request.UrlReferrer.AbsoluteUri.Contains("Rent.aspx") || searchType.Contains("2"))
-                {
-                    int i = 1000;
-                    while (i <= 20000)
-                    {
-                        ListItem list = new ListItem();
-                        list.Value = i.ToString();
-                        if (i.ToString() == "20000")
-                        {
-                            list.Text = "Kshs" + i.ToString() + "+";
-                        }
-                        else
-                        {
-                            list.Text = "Kshs" + i.ToString();
-                        }
-                        ddlMinimum.Items.Add(list);
-                        ddlMaximum.Items.Add(list);
-                        i = i + 1000;
-                    }
-                }
 
+                if (!Request.Browser.Crawler)
+                {
+                    if (Request.UrlReferrer.AbsolutePath.Contains("Sell.aspx") || searchType.Contains("1"))
+                    {
+                        int i = 50000;
+                        while (i <= 10000000)
+                        {
+                            ListItem list = new ListItem();
+                            // list.Value = String.Format("## ### ###", i.ToString());
+                            list.Value = i.ToString();
+                            if (i.ToString() == "10000000")
+                            {
+                                list.Text = "Kshs" + i.ToString() + "+";
+                            }
+                            else
+                            {
+                                list.Text = "Kshs" + i.ToString();
+                            }
+                            ddlMinimum.Items.Add(list);
+                            ddlMaximum.Items.Add(list);
+                            i = i + 50000;
+                        }
+                    }
+                    else if (Request.UrlReferrer.AbsoluteUri.Contains("Rent.aspx") || searchType.Contains("2"))
+                    {
+                        int i = 1000;
+                        while (i <= 20000)
+                        {
+                            ListItem list = new ListItem();
+                            list.Value = i.ToString();
+                            if (i.ToString() == "20000")
+                            {
+                                list.Text = "Kshs" + i.ToString() + "+";
+                            }
+                            else
+                            {
+                                list.Text = "Kshs" + i.ToString();
+                            }
+                            ddlMinimum.Items.Add(list);
+                            ddlMaximum.Items.Add(list);
+                            i = i + 1000;
+                        }
+                    }
 
+                }
 
 
 
