@@ -607,7 +607,7 @@
                                 </div>
                             </div>
                             <div style="clear: both; margin-top: 20px">
-                                <asp:HyperLink ID="hyperSendEmail" NavigateUrl="#5" runat="server" class="button"></asp:HyperLink></div>
+                                <asp:HyperLink ID="hyperSendEmail" NavigateUrl="#5" Text="Submit" runat="server" class="button"></asp:HyperLink></div>
                         </div>
                     </div>
                     <div style="clear: both">

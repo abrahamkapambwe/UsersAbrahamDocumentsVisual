@@ -184,6 +184,9 @@
     </Content>
     <Content Include="bin\AntiXSSLibrary.dll" />
     <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\AWSSDK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\bin\Microsoft.Json.dll" />
     <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
@@ -210,9 +213,6 @@
     <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\RealEstateLibraries.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\RealEstateLibraries.pdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\RealEstateWebRole.dll" />
