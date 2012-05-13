@@ -103,8 +103,8 @@
                                     </AnonymousTemplate>
                                     <LoggedInTemplate>
                                         <div style="float: left">
-                                            <asp:Menu ID="NavigationMenu4" runat="server" CssClass="menu" EnableViewState="false"
-                                                IncludeStyleBlock="false" Orientation="Horizontal" DynamicHoverStyle-CssClass="menu">
+                                            <asp:Menu ID="NavigationMenu4" runat="server" CssClass="menu" EnableViewState="true"
+                                                IncludeStyleBlock="false" Orientation="Horizontal" DisappearAfter="5" DynamicHoverStyle-CssClass="menu">
                                                 <Items>
                                                     <asp:MenuItem NavigateUrl="#" Text="Profile">
                                                         <asp:MenuItem NavigateUrl="/Members/Profile.aspx" Text="User Profile"></asp:MenuItem>

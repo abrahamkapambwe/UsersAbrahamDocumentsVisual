@@ -23,7 +23,10 @@ namespace RealEstateWebRole.Account
             GetAuthenticationType();
             if (!string.IsNullOrWhiteSpace(FederationForms))
             {
-                ListDataBind();
+                if (!IsPostBack)
+                {
+                    ListDataBind();
+                }
             }
 
 
@@ -32,7 +35,7 @@ namespace RealEstateWebRole.Account
 
         private void GetAuthenticationType()
         {
-           
+
             if (HttpContext.Current.User.Identity.AuthenticationType.Contains("Forms"))
             {
                 MembershipUser membershipuser = Membership.GetUser(HttpContext.Current.User.Identity.Name);
@@ -48,13 +51,13 @@ namespace RealEstateWebRole.Account
             int expired = 0;
             int incomplete = 0;
             int reported = 0;
-            var previewProperties = Search.GetPreviews();
+            var previewProperties = Search.GetPreviews(FederationForms);
             foreach (var status in previewProperties)
             {
                 if (status.Active)
                 {
-                   
-                        active = active + 1;
+
+                    active = active + 1;
                 }
                 else if (status.Approved)
                 {
@@ -83,7 +86,7 @@ namespace RealEstateWebRole.Account
                 switch (filterlist.Items[i].Text)
                 {
                     case "Active":
-                        filterlist.Items[i].Text = filterlist.Items[i].Text + "("  + active + ")";
+                        filterlist.Items[i].Text = filterlist.Items[i].Text + "(" + active + ")";
                         if (active != 0)
                         {
                             filterlist.Items[i].Selected = true;
@@ -188,7 +191,7 @@ namespace RealEstateWebRole.Account
         {
             LinkButton bnt = (LinkButton)sender;
 
-           string propertyID = Convert.ToString(bnt.CommandArgument);
+            string propertyID = Convert.ToString(bnt.CommandArgument);
             Search.DeleteProperty(propertyID);
             ListDataBind();
 
@@ -243,7 +246,7 @@ namespace RealEstateWebRole.Account
                     lblActivated.Text = Convert.ToString(prevProprtyTable.ActivedDate);
                     lblExpiredDate.Text = Convert.ToString(prevProprtyTable.ExpiryDate);
                     lblNumberOfViews.Text = Convert.ToString(prevProprtyTable.NumberOfView);
-                   // lblNumberofDaysView.Text = Convert.ToString(prevProprtyTable.NumberOfView);
+                    // lblNumberofDaysView.Text = Convert.ToString(prevProprtyTable.NumberOfView);
                 }
 
 

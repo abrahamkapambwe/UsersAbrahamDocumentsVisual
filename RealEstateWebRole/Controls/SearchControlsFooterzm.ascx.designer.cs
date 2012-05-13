@@ -10,6 +10,6 @@
 namespace RealEstateWebRole.Controls {
     
     
-    public partial class SearchControlsFooterke {
+    public partial class SearchControlsFooterzm {
     }
 }

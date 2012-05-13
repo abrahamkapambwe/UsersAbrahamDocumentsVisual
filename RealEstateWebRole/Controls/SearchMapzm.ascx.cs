@@ -8,7 +8,7 @@ using RealEstateLibraries;
 
 namespace RealEstateWebRole.Controls
 {
-    public partial class SearchMapke : System.Web.UI.UserControl
+    public partial class SearchMapzm : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

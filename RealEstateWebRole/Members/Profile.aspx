@@ -100,17 +100,15 @@
                                 <span class="labeltext">Province</span>
                             </td>
                             <td>
-                                <asp:DropDownList class="dropbox" runat="server" ID="ddlUserProvince">
+                                <asp:DropDownList runat="server" class="dropbox" ID="ddlUserProvince">
                                     <asp:ListItem Text="--Select--" Value="--Select--"></asp:ListItem>
-                                    <asp:ListItem Text="Eastern Cape" Value="Eastern Cape"></asp:ListItem>
-                                    <asp:ListItem Text="Free State" Value="Free State"></asp:ListItem>
-                                    <asp:ListItem Text="Gauteng" Value="Gauteng"></asp:ListItem>
-                                    <asp:ListItem Text="KwaZulu Natal" Value="KwaZulu Natal"></asp:ListItem>
-                                    <asp:ListItem Text="Limpopo" Value="Limpopo"></asp:ListItem>
-                                    <asp:ListItem Text="Mpumalanga" Value="Mpumalanga"></asp:ListItem>
-                                    <asp:ListItem Text="Northern Cape" Value="Northern Cape"></asp:ListItem>
-                                    <asp:ListItem Text="North West" Value="North West"></asp:ListItem>
-                                    <asp:ListItem Text="Western Cape" Value="Western Cape"></asp:ListItem>
+                                    <asp:ListItem Text="Central" Value="Central"></asp:ListItem>
+                                    <asp:ListItem Text="Copperbelt" Value="Eastern"></asp:ListItem>
+                                    <asp:ListItem Text="Lusaka" Value="Copperbelt"></asp:ListItem>
+                                    <asp:ListItem Text="Eastern" Value="Eastern"></asp:ListItem>
+                                    <asp:ListItem Text="Luapula" Value="Luapula"></asp:ListItem>
+                                    <asp:ListItem Text="Northern" Value="Northern"></asp:ListItem>
+                                    <asp:ListItem Text="Southern" Value="Southern"></asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>

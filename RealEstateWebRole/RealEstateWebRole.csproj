@@ -87,10 +87,9 @@
     <Reference Include="AntiXSSLibrary">
       <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\AntiXSSLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="AWSSDK, Version=1.4.6.2, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
+    <Reference Include="AWSSDK, Version=1.4.9.0, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\AWS SDK for .NET\bin\AWSSDK.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\Program Files\AWS SDK for .NET\bin\AWSSDK.dll</HintPath>
     </Reference>
     <Reference Include="HtmlSanitizationLibrary">
       <HintPath>packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\HtmlSanitizationLibrary.dll</HintPath>
@@ -123,7 +122,8 @@
     <Reference Include="Microsoft.ServiceModel.Internal">
       <HintPath>packages\WebApi.0.6.0\lib\40-Full\Microsoft.ServiceModel.Internal.dll</HintPath>
     </Reference>
-    <Reference Include="RealEstateLibraries">
+    <Reference Include="RealEstateLibraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Users\Abraham\Documents\Visual Studio 2010\Projects\RealEstateLibraries\RealEstateLibraries\bin\Debug\RealEstateLibraries.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders">
@@ -183,9 +183,6 @@
     </Content>
     <Content Include="bin\AntiXSSLibrary.dll" />
     <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\AWSSDK.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="bin\bin\Microsoft.Json.dll" />
     <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
@@ -211,12 +208,6 @@
     <Content Include="bin\Microsoft.ServiceModel.Internal.dll" />
     <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\RealEstateLibraries.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\RealEstateLibraries.pdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="bin\RealEstateWebRole.dll" />
     <Content Include="bin\RealEstateWebRole.pdb" />
     <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
@@ -331,6 +322,8 @@
     <Content Include="images\top-bg.png" />
     <Content Include="images\visadebit-by-mb.gif" />
     <Content Include="images\visaelectron-by-mb.gif" />
+    <Content Include="Members\AgentProfilezm.aspx" />
+    <Content Include="Members\UploadPictureszm.aspx" />
     <Content Include="Members\maps\Map.ascx" />
     <Content Include="Members\maps\PayGateway.aspx" />
     <Content Include="Members\maps\previewMap.aspx" />
@@ -616,6 +609,20 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\AgentProfilezm.aspx.cs">
+      <DependentUpon>AgentProfilezm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\AgentProfilezm.aspx.designer.cs">
+      <DependentUpon>AgentProfilezm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\UploadPictureszm.aspx.cs">
+      <DependentUpon>UploadPictureszm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\UploadPictureszm.aspx.designer.cs">
+      <DependentUpon>UploadPictureszm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Members\maps\PayGateway.aspx.cs">
       <DependentUpon>PayGateway.aspx</DependentUpon>

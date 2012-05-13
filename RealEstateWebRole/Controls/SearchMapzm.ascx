@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchMapzm.ascx.cs"
-    Inherits="RealEstateWebRole.Controls.SearchMapke" %>
+    Inherits="RealEstateWebRole.Controls.SearchMapzm" %>
 <div class="map_search">
     <script type="text/javascript">
         function showArea(value) {

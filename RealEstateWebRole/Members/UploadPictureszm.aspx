@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UploadPictures.aspx.cs"
-    Inherits="RealEstateWebRole.Account.UploadPictures" MasterPageFile="~/Site.Master"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UploadPictureszm.aspx.cs"
+    Inherits="RealEstateWebRole.Account.UploadPictureszm" MasterPageFile="~/Site.Master"
     Async="true" %>
 
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
@@ -238,17 +238,15 @@
                                                     <td width="200px">
                                                     </td>
                                                     <td>
-                                                        <asp:DropDownList Visible="false" class="dropbox" runat="server" ID="ddlUserProvince">
+                                                        <asp:DropDownList runat="server" class="dropbox" ID="DropDownList1">
                                                             <asp:ListItem Text="--Select--" Value="--Select--"></asp:ListItem>
-                                                            <asp:ListItem Text="Eastern Cape" Value="Eastern Cape"></asp:ListItem>
-                                                            <asp:ListItem Text="Free State" Value="Free State"></asp:ListItem>
-                                                            <asp:ListItem Text="Gauteng" Value="Gauteng"></asp:ListItem>
-                                                            <asp:ListItem Text="KwaZulu Natal" Value="KwaZulu Natal"></asp:ListItem>
-                                                            <asp:ListItem Text="Limpopo" Value="Limpopo"></asp:ListItem>
-                                                            <asp:ListItem Text="Mpumalanga" Value="Mpumalanga"></asp:ListItem>
-                                                            <asp:ListItem Text="Northern Cape" Value="Northern Cape"></asp:ListItem>
-                                                            <asp:ListItem Text="North West" Value="North West"></asp:ListItem>
-                                                            <asp:ListItem Text="Western Cape" Value="Western Cape"></asp:ListItem>
+                                                            <asp:ListItem Text="Central" Value="Central"></asp:ListItem>
+                                                            <asp:ListItem Text="Copperbelt" Value="Eastern"></asp:ListItem>
+                                                            <asp:ListItem Text="Lusaka" Value="Copperbelt"></asp:ListItem>
+                                                            <asp:ListItem Text="Eastern" Value="Eastern"></asp:ListItem>
+                                                            <asp:ListItem Text="Luapula" Value="Luapula"></asp:ListItem>
+                                                            <asp:ListItem Text="Northern" Value="Northern"></asp:ListItem>
+                                                            <asp:ListItem Text="Southern" Value="Southern"></asp:ListItem>
                                                         </asp:DropDownList>
                                                     </td>
                                                 </tr>
@@ -333,7 +331,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <span class="labeltext">City/County</span>
+                                                        <span class="labeltext">City</span>
                                                     </td>
                                                     <td>
                                                         <asp:TextBox runat="server" class="textbox" ID="txtCity"></asp:TextBox>
@@ -344,15 +342,15 @@
                                                         <span class="labeltext">Province</span>
                                                     </td>
                                                     <td>
-                                                        <asp:DropDownList class="dropbox" runat="server" ID="ddlProvince">
+                                                        <asp:DropDownList runat="server" class="dropbox" ID="ddlProvince">
                                                             <asp:ListItem Text="--Select--" Value="--Select--"></asp:ListItem>
-                                                            <asp:ListItem Text="Coast" Value="Coast"></asp:ListItem>
+                                                            <asp:ListItem Text="Central" Value="Central"></asp:ListItem>
+                                                            <asp:ListItem Text="Copperbelt" Value="Eastern"></asp:ListItem>
+                                                            <asp:ListItem Text="Lusaka" Value="Copperbelt"></asp:ListItem>
                                                             <asp:ListItem Text="Eastern" Value="Eastern"></asp:ListItem>
-                                                            <asp:ListItem Text="Nairobi" Value="Nairobi"></asp:ListItem>
-                                                            <asp:ListItem Text="North Eastern" Value="North Eastern"></asp:ListItem>
-                                                            <asp:ListItem Text="Nyanza" Value="Nyanza"></asp:ListItem>
-                                                            <asp:ListItem Text="Rift Valley" Value="Rift Valley"></asp:ListItem>
-                                                            <asp:ListItem Text="Western" Value="Western"></asp:ListItem>
+                                                            <asp:ListItem Text="Luapula" Value="Luapula"></asp:ListItem>
+                                                            <asp:ListItem Text="Northern" Value="Northern"></asp:ListItem>
+                                                            <asp:ListItem Text="Southern" Value="Southern"></asp:ListItem>
                                                         </asp:DropDownList>
                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Text="Please enter the province where your company is located."
                                                             ControlToValidate="ddlProvince" InitialValue="--Select--" ValidationGroup="Agentform"></asp:RequiredFieldValidator>
@@ -1114,7 +1112,7 @@
                                                 Property Pictures</div>
                                             <br />
                                             <div>
-                                                <iframe id="propertypictures" runat="server" width="600px" height="700px" frameborder="0"
+                                                <iframe id="propertypictures" runat="server" width="600px" height="400px" frameborder="0"
                                                     scrolling="no"></iframe>
                                             </div>
                                             <div style="margin-top: 10px">
@@ -1127,7 +1125,7 @@
                                                 Thank you very much for publishing your listing on our site.Your listing will be
                                                 live in 24hrs.</p>
                                             <p>
-                                                If you want the listing to appear on <a href="http://newske.apphb.com" target="_blank">Newskenya</a>&nbsp;&nbsp;
+                                                If you want the listing to appear on Newkenya and Safarike.apphb
                                                 <asp:LinkButton runat="server" ID="lkbPartner" OnClick="lkb_Partner">here</asp:LinkButton>
                                             </p>
                                         </div>

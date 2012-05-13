@@ -31,7 +31,7 @@
                         <div class="paging_top">
                             <div style="border-top: 1px solid #bbb" class="inner_paging_top">
                                 <asp:DataPager runat="server" ID="BeforeListDataPager" PagedControlID="lstPropertyView"
-                                    PageSize="2">
+                                    PageSize="10">
                                     <Fields>
                                         <asp:TemplatePagerField>
                                             <PagerTemplate>
@@ -54,7 +54,7 @@
                                 </asp:DataPager>
                             </div>
                         </div>
-                        <div style="border-left: 1px solid #bbb; border-right: 1px solid #bbb; height: 300px;
+                        <div style="border-left: 1px solid #bbb; border-right: 1px solid #bbb; height: auto;
                             width: 100%">
                             <asp:ListView runat="server" ID="lstPropertyView" OnPagePropertiesChanged="lstPropertyView_PagePropertiesChanged"
                                 OnItemDataBound="lstPropertyView_OnItemDataBound">
@@ -130,7 +130,7 @@
                         </div>
                         <div class="paging_bottom">
                             <div class="inner_paging_bottom">
-                                <asp:DataPager runat="server" ID="DataPager1" PagedControlID="lstPropertyView" PageSize="2">
+                                <asp:DataPager runat="server" ID="DataPager1" PagedControlID="lstPropertyView" PageSize="10">
                                     <Fields>
                                         <asp:TemplatePagerField>
                                             <PagerTemplate>

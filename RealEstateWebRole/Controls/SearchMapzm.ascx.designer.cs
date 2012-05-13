@@ -10,7 +10,7 @@
 namespace RealEstateWebRole.Controls {
     
     
-    public partial class SearchMapke {
+    public partial class SearchMapzm {
         
         /// <summary>
         /// lblTitle control.

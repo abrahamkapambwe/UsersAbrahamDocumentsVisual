@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchControlsFooterzm.ascx.cs"
-    Inherits="RealEstateWebRole.Controls.SearchControlsFooterke" %>
+    Inherits="RealEstateWebRole.Controls.SearchControlsFooterzm" %>
 <div class="searchfooter">
     <div style="width: 100%; height: 30px">
     </div>
